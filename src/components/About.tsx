@@ -24,7 +24,7 @@ const About: React.FC = () => {
       <div className="about-project-details">
         <h3>What is YOTOIGB?</h3>
         <p>
-          <strong>YoToIgb</strong> is a very simple word-level translator that converts Yoruba words into
+          <strong>YOTOIGB</strong> is a very simple word-level translator that converts Yoruba words into
           their Igbo and English equivalents using a custom-built local dictionary. It was created
           with accessibility and simplicity in mind — making language translation quick and easy for
           users of all backgrounds.
