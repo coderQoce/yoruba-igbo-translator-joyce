@@ -1,5 +1,932 @@
 [
-  { "yoruba": "ọjọ", "igbo": "ụbọchị", "english": "day" },
-  { "yoruba": "omi", "igbo": "mmiri", "english": "water" },
-  { "yoruba": "ẹja", "igbo": "azu", "english": "fish" }
+  {
+    "yoruba": "Ilé wa ńlá gan-an.",
+    "igbo": "Ụ́lọ́ anyị buru ibu.",
+    "english": "Our house is very big."
+  },
+  {
+    "yoruba": "Mo wẹ̀ ilé lónìí.",
+    "igbo": "A sachapụ ụlọ taa.",
+    "english": "I cleaned the house today."
+  },
+  {
+    "yoruba": "Nǹkan inú yàrá mi ṣìmọ́.",
+    "igbo": "Ihe dị n'ime ụlọ m dị ọcha.",
+    "english": "The things in my room are clean."
+  },
+  {
+    "yoruba": "Màmá mi wà ní ibi idáná.",
+    "igbo": "Nne m nọ n'ụlọ nri.",
+    "english": "My mother is in the kitchen."
+  },
+  {
+    "yoruba": "Ọ̀pẹ́ ni mo ní fún bàbá mi.",
+    "igbo": "Enwerem ekele maka nna m.",
+    "english": "I am grateful for my father."
+  },
+  {
+    "yoruba": "Yàrá àlejò wà lẹ́hìn ilé.",
+    "igbo": "Ụlọ ọbịa dị n'azụ ụlọ.",
+    "english": "The guest room is behind the house."
+  },
+  
+  {
+    "yoruba": "Ilé yi ní ilẹ̀ méjì.",
+    "igbo": "Ụlọ a nwere ụlọ elu.",
+    "english": "This house has two floors."
+  },
+  {
+    "yoruba": "Mo fẹ́ fi aṣọ wẹ̀.",
+    "igbo": "Achọrọ m saa uwe.",
+    "english": "I want to wash clothes."
+  },
+  {
+    "yoruba": "Kọ́tà wà lẹ́gbẹ̀ẹ́ ilé wa.",
+    "igbo": "Ụlọ ahịa dị nso ụlọ anyị.",
+    "english": "The shop is beside our house."
+  },
+  {
+    "yoruba": "Ẹ̀rọ ìdáná náà ti bàjẹ́.",
+    "igbo": "Ngwa nri ahụ emebiela.",
+    "english": "The stove is broken."
+  },
+  {
+    "yoruba": "Ṣé o rí bàtà mi?",
+    "igbo": "Ị hụ̀là akpụkpọ ụkwụ m?",
+    "english": "Have you seen my shoes?"
+  },
+  {
+    "yoruba": "Tẹlifísọ̀nù wà ní yàrá ìgbafẹ́.",
+    "igbo": "Ụlọ ekiri nọ n'ime ụlọ izu ike.",
+    "english": "The television is in the living room."
+  },
+  {
+    "yoruba": "Jọ̀ọ́, pa fitílà náà.",
+    "igbo": "Biko, gbanyụọ ọkụ ahụ.",
+    "english": "Please turn off the light."
+  },
+  {
+    "yoruba": "Ilé wa ní balùwẹ̀ mẹta.",
+    "igbo": "Ụlọ anyị nwere ime ụlọ ịsa ahụ atọ.",
+    "english": "Our house has three bathrooms."
+  },
+  {
+    "yoruba": "Ẹ̀rọ ìfọ̀ ọ̀wọ̀ ni mo lò.",
+    "igbo": "Ejiri m igwe efesa aka.",
+    "english": "I used the washing machine."
+  },
+  {
+    "yoruba": "A ń jẹun ní tábìlì.",
+    "igbo": "Anyị na-eri nri n'elu tebụl.",
+    "english": "We are eating at the table."
+  },
+  {
+    "yoruba": "Ọmọ mi ń sùn.",
+    "igbo": "Nwa m na-ehi ụra.",
+    "english": "My child is sleeping."
+  },
+  {
+    "yoruba": "Ẹ̀rù náà wà nínú apoti.",
+    "igbo": "Ngwongwo ahụ dị n'ime igbe.",
+    "english": "The load is in the box."
+  },
+  {
+    "yoruba": "Ṣé o ti mu omi?",
+    "igbo": "Ị ṅurula mmiri?",
+    "english": "Have you drunk water?"
+  },
+  {
+    "yoruba": "A ń lọ sùn níyìí.",
+    "igbo": "Anyị na-aga n'ụra ugbu a.",
+    "english": "We are going to sleep now."
+  },
+  {
+    "yoruba": "Ẹ̀rọ ìtura yìí kó tó dùn.",
+    "igbo": "Igwe oyi a dị jụụ.",
+    "english": "This air conditioner is nice."
+  },
+  {
+    "yoruba": "Mo gbọ́ ohun kan nínú ilé.",
+    "igbo": "Anụrụ m ụda n'ime ụlọ.",
+    "english": "I heard a noise in the house."
+  },
+  {
+    "yoruba": "Ṣe àtẹ́lẹwọ́ rẹ mọ́?",
+    "igbo": "Ị sachapụla aka gị?",
+    "english": "Did you wash your hands?"
+  },
+  {
+    "yoruba": "Yàrá àwọn ọmọ wà nílẹ̀.",
+    "igbo": "Ụlọ ụmụaka dị n'okpuru.",
+    "english": "The children's room is downstairs."
+  },
+  {
+    "yoruba": "Màmá mi ṣe àmàlà lónìí.",
+    "igbo": "Nne m siri àmàlà taa.",
+    "english": "My mom made àmàlà today."
+  },
+  {
+    "yoruba": "Mo fi aṣọ tuntun wọ.",
+    "igbo": "Ejirila m uwe ọhụrụ.",
+    "english": "I wore a new dress."
+  },
+  {
+    "yoruba": "Ṣé o ti tì ílà?",
+    "igbo": "Ị ti akwaala ákụ?",
+    "english": "Have you pounded the okra?"
+  },
+  {
+    "yoruba": "A ti ra gàásì tuntun.",
+    "igbo": "Ezughị gas ọhụrụ.",
+    "english": "We bought a new gas."
+  },
+  {
+    "yoruba": "Ọkò tí wà ní gàràjì.",
+    "igbo": "Ugboala dị n'ime garaaji.",
+    "english": "The car is in the garage."
+  },
+  {
+    "yoruba": "Mo fẹ́ san omi.",
+    "igbo": "Achọrọ m zoo mmiri.",
+    "english": "I want to fetch water."
+  },
+  {
+    "yoruba": "Ṣé o ti wẹ ilé náà?",
+    "igbo": "Ị sachapụla ụlọ ahụ?",
+    "english": "Have you mopped the house?"
+  },{
+    "yoruba": "Ọwọ́ mi ti rẹ.",
+    "igbo": "Aka m ruru.",
+    "english": "My hand is tired."
+  },
+  {
+    "yoruba": "Ẹ̀rọ aṣọ yìí ti dáa.",
+    "igbo": "Igwe saa uwe a dị mma.",
+    "english": "This washing machine is good."
+  },
+  {
+    "yoruba": "A ti kó àwọn aṣọ.",
+    "igbo": "Emere uwe niile.",
+    "english": "The clothes have been packed."
+  },
+  {
+    "yoruba": "Ṣé o fọ́ pẹ̀lẹbẹ?",
+    "igbo": "Ị sachapụrụ efere?",
+    "english": "Did you wash the plate?"
+  },
+  {
+    "yoruba": "Ọmọ náà ń ṣeré níta.",
+    "igbo": "Nwa ahụ na-egwu egwu n'èzí.",
+    "english": "The child is playing outside."
+  },
+  {
+    "yoruba": "Mo mọ̀ọ́mọ mọ́ ilé wa.",
+    "igbo": "Amarom ụlọ anyị nke ọma.",
+    "english": "I know our house well."
+  },
+  {
+    "yoruba": "Ṣé o rí bùkátà mi?",
+    "igbo": "Ị hụ̀là bukatam?",
+    "english": "Did you see my bucket?"
+  },
+  {
+    "yoruba": "Ilé náà wà níta.",
+    "igbo": "Ụlọ ahụ dị n'èzí.",
+    "english": "The house is outside."
+  },
+  {
+    "yoruba": "A ń rí ojú-ọjọ́ tó dara.",
+    "igbo": "Anyị na-ahụ ihu igwe ọma.",
+    "english": "We are having good weather."
+  },
+  {
+    "yoruba": "Wí pé kí wọ́n bọ́.",
+    "igbo": "Gwa ha ka ha bịa.",
+    "english": "Tell them to come."
+  },
+  {
+    "yoruba": "Ọmọ náà ń kó aṣọ.",
+    "igbo": "Nwa ahụ na-ejikọ uwe.",
+    "english": "The child is folding clothes."
+  },
+  {
+    "yoruba": "Fún mi ní búrẹ́dì.",
+    "igbo": "Nye m achịcha.",
+    "english": "Give me bread."
+  },
+  {
+    "yoruba": "Ṣé o ti mú tí?",
+    "igbo": "Ị ṅurula tii?",
+    "english": "Have you had tea?"
+  },
+  {
+    "yoruba": "Kọ́mpútà wà lórí tábìlì.",
+    "igbo": "Kọmpụta dị n'elu tebụl.",
+    "english": "The computer is on the table."
+  },
+  {
+    "yoruba": "Ẹ̀rọ ayélujára yìí yara.",
+    "igbo": "Igwe internet a dị ngwa.",
+    "english": "This internet device is fast."
+  },
+  {
+    "yoruba": "Ọkọ ayárabíàṣá náà wà nílé.",
+    "igbo": "Ugboala ojii ahụ nọ n'ụlọ.",
+    "english": "The black car is at home."
+  },
+  {
+    "yoruba": "Ẹbọ̀rọ̀ mi wà nínú àga.",
+    "igbo": "Mpempe akwụkwọ m dị n'ime drawer.",
+    "english": "My notebook is in the drawer."
+  },
+  {
+    "yoruba": "Ṣé ẹ kúrọ̀ nínú yàrá?",
+    "igbo": "Ị pụọla n'ime ụlọ?",
+    "english": "Did you leave the room?"
+  },
+  {
+    "yoruba": "Ṣọ́ọ̀ṣì wà lẹ́gbẹ̀ẹ́ ilé wa.",
+    "igbo": "Ụka dị nso ụlọ anyị.",
+    "english": "The church is near our house."
+  },
+  {
+    "yoruba": "Ilé",
+    "igbo": "Ụ́lọ́",
+    "english": "House"
+  },
+  {
+    "yoruba": "Ìyàwó",
+    "igbo": "Nwúnyè",
+    "english": "Wife"
+  },
+  {
+    "yoruba": "Ọkò",
+    "igbo": "Dì",
+    "english": "Husband"
+  },
+  {
+    "yoruba": "Ọmọ",
+    "igbo": "Ṅwá",
+    "english": "Child"
+  },
+  {
+    "yoruba": "Bàbá",
+    "igbo": "Nnà",
+    "english": "Father"
+  },
+  {
+    "yoruba": "Ìyá",
+    "igbo": "Nnè",
+    "english": "Mother"
+  },
+  {
+    "yoruba": "Àgbọ̀n",
+    "igbo": "Nwánnè ùkwù",
+    "english": "Elder sibling"
+  },
+  {
+    "yoruba": "Àbúrò",
+    "igbo": "Nwánnè ńtà",
+    "english": "Younger sibling"
+  },
+  {
+    "yoruba": "Oúnjẹ",
+    "igbo": "Ṅrì",
+    "english": "Food"
+  },
+  {
+    "yoruba": "Òdò",
+    "igbo": "Ókà",
+    "english": "Mortar"
+  },
+  {
+    "yoruba": "Ọmọ-òdò",
+    "igbo": "Ọrụ̀gbọ nri",
+    "english": "Cook"
+  },
+  {
+    "yoruba": "Iyẹ̀fun",
+    "igbo": "Ńzù",
+    "english": "White chalk"
+  },
+  {
+    "yoruba": "Aṣọ",
+    "igbo": "Ákwà",
+    "english": "Cloth"
+  },
+  {
+    "yoruba": "Bàtà",
+    "igbo": "Àkpụ̀kpụ̀ Ụ́kwụ́",
+    "english": "Shoes"
+  },
+  {
+    "yoruba": "Ṣókòtò",
+    "igbo": "Ụ̀kwù ákwà",
+    "english": "Trousers"
+  },
+  {
+    "yoruba": "Bùbá",
+    "igbo": "Úwé ǹtì",
+    "english": "Blouse"
+  },
+  {
+    "yoruba": "Ìbi",
+    "igbo": "Ụ́zọ̀",
+    "english": "Place"
+  },
+  {
+    "yoruba": "Àjá",
+    "igbo": "Ázị́zà",
+    "english": "Broom"
+  },
+  {
+    "yoruba": "Ìkọ́",
+    "igbo": "Ụ́sọ́",
+    "english": "Wall"
+  },
+  {
+    "yoruba": "Ọ̀nà",
+    "igbo": "Ụ́nù Ụ́lọ́",
+    "english": "Gate"
+  },
+  {
+    "yoruba": "Iná",
+    "igbo": "Ọ́kụ́",
+    "english": "Fire"
+  },
+  {
+    "yoruba": "Mú",
+    "igbo": "Ṅụ́",
+    "english": "Drink"
+  },
+  {
+    "yoruba": "Jẹ",
+    "igbo": "Rí",
+    "english": "Eat"
+  },
+  {
+    "yoruba": "Ṣe",
+    "igbo": "Méé",
+    "english": "Do / Make"
+  },
+  {
+    "yoruba": "Fọ́",
+    "igbo": "Sàá",
+    "english": "Wash"
+  },
+  {
+    "yoruba": "Ṣìlẹ̀",
+    "igbo": "Tùfúọ́",
+    "english": "Drop / Discard"
+  },
+  {
+    "yoruba": "Ẹ̀rọ aṣọ",
+    "igbo": "Ígbe ákwà",
+    "english": "Wardrobe"
+  },
+  {
+    "yoruba": "Tàbíìlì",
+    "igbo": "Téébùlù",
+    "english": "Table"
+  },
+  {
+    "yoruba": "Àgá",
+    "igbo": "Ọ́chè",
+    "english": "Chair"
+  },
+  {
+    "yoruba": "Ṣógún",
+    "igbo": "Ógwù",
+    "english": "Medicine"
+  },
+  {
+    "yoruba": "Yàrá",
+    "igbo": "Ụ́lọ̀ ímé",
+    "english": "Room"
+  },
+  {
+    "yoruba": "Àgọ̀",
+    "igbo": "Ụ́lọ̀ ńrí",
+    "english": "Kitchen"
+  },
+  {
+    "yoruba": "Ibùsùn",
+    "igbo": "Ákwà ńrọ",
+    "english": "Bed"
+  },
+  {
+    "yoruba": "Ìbùsọ́",
+    "igbo": "Ákwà ụ́ra",
+    "english": "Pillow"
+  },
+  {
+    "yoruba": "Ìbọ́ra",
+    "igbo": "Ákwà íkpò",
+    "english": "Blanket"
+  },
+  {
+    "yoruba": "Tàbíìlì",
+    "igbo": "Téébùlù",
+    "english": "Table"
+  },
+  {
+    "yoruba": "Àgá",
+    "igbo": "Ọ́chè",
+    "english": "Chair"
+  },
+  {
+    "yoruba": "Ṣógún",
+    "igbo": "Ógwù",
+    "english": "Medicine"
+  },
+  {
+    "yoruba": "Yàrá",
+    "igbo": "Ụ́lọ̀ ímé",
+    "english": "Room"
+  },
+  {
+    "yoruba": "Àgọ̀",
+    "igbo": "Ụ́lọ̀ ńrí",
+    "english": "Kitchen"
+  },
+  {
+    "yoruba": "Ibùsùn",
+    "igbo": "Ákwà ńrọ",
+    "english": "Bed"
+  },
+  {
+    "yoruba": "Ìbùsọ́",
+    "igbo": "Ákwà ụ́ra",
+    "english": "Pillow"
+  },
+  {
+    "yoruba": "Ìbọ́ra",
+    "igbo": "Ákwà íkpò",
+    "english": "Blanket"
+  },
+   {
+    "yoruba": "Ẹ̀rọ amúlétùtù",
+    "igbo": "Ígwè ǹnyi",
+    "english": "Fridge"
+  },
+  {
+    "yoruba": "Ẹ̀rọ ìjẹun",
+    "igbo": "Igwè nri",
+    "english": "Cooker"
+  },
+  {
+    "yoruba": "Ẹ̀rọ ìkánná",
+    "igbo": "Igwè mmanụ ọkụ",
+    "english": "Stove"
+  },
+  {
+    "yoruba": "Ẹrù",
+    "igbo": "Ǹgwọ̀ngwọ̀",
+    "english": "Load"
+  },
+  {
+    "yoruba": "Ẹran",
+    "igbo": "Ànụ́",
+    "english": "Meat"
+  },
+  {
+    "yoruba": "Ẹja",
+    "igbo": "Ázụ̀",
+    "english": "Fish"
+  },
+  {
+    "yoruba": "Ẹyin",
+    "igbo": "Àkwá",
+    "english": "Egg"
+  },
+  {
+    "yoruba": "Iresi",
+    "igbo": "Ọ́sikàpà",
+    "english": "Rice"
+  },
+  {
+    "yoruba": "Èbà",
+    "igbo": "Ǹnì àkpù",
+    "english": "Cassava fufu"
+  },
+  {
+    "yoruba": "Iyán",
+    "igbo": "Ǹnì jí",
+    "english": "Pounded yam"
+  },
+  {
+    "yoruba": "Àmàlà",
+    "igbo": "Ǹnì ojì",
+    "english": "Yam flour meal"
+  },
+  {
+    "yoruba": "Ẹ̀pò pupa",
+    "igbo": "Mmànụ̀ ọ́jị̀",
+    "english": "Palm oil"
+  },
+  {
+    "yoruba": "Ọ̀bẹ̀",
+    "igbo": "Òfè",
+    "english": "Soup"
+  },
+  {
+    "yoruba": "Ẹ̀ka ìdílé",
+    "igbo": "Ụ̀mụ̀nná",
+    "english": "Family branch"
+  },
+  {
+    "yoruba": "Ọrẹ́",
+    "igbo": "Ényì",
+    "english": "Friend"
+  },
+  {
+    "yoruba": "Ẹ̀kọ́",
+    "igbo": "Ákụ́kọ́",
+    "english": "Lesson / Education"
+  },
+  {
+    "yoruba": "Ẹ̀rọ",
+    "igbo": "Ị́gwè",
+    "english": "Machine / Device"
+  },
+  {
+    "yoruba": "Ọ̀jọ́",
+    "igbo": "Ụ́bọ̀chi",
+    "english": "Day"
+  },
+  {
+    "yoruba": "Òru",
+    "igbo": "Ọ́rụ́",
+    "english": "Work"
+  },
+  {
+    "yoruba": "Ìròlẹ́",
+    "igbo": "M̀gbèdè",
+    "english": "Evening"
+  },
+  {
+    "yoruba": "Ọ̀sán",
+    "igbo": "Èhìhìè",
+    "english": "Afternoon"
+  },
+  {
+    "yoruba": "Ọ̀wúrọ̀",
+    "igbo": "Ụ̀tụ̀tụ̀",
+    "english": "Morning"
+  },
+  {
+    "yoruba": "Alẹ́",
+    "igbo": "Ǹchì",
+    "english": "Night"
+  },
+  {
+    "yoruba": "Sun",
+    "igbo": "Híè ǹrụ̀",
+    "english": "Sleep"
+  },
+  {
+    "yoruba": "Ẹ̀rọ ìtẹ́wọgbà",
+    "igbo": "Ị́gwè mmanya nri",
+    "english": "Microwave"
+  },
+  {
+    "yoruba": "Ẹ̀rọ redio",
+    "igbo": "Ǹrèdíò",
+    "english": "Radio"
+  },
+  {
+    "yoruba": "Tíví",
+    "igbo": "Ụ́lọ̀ onyonyo",
+    "english": "TV"
+  },
+  {
+    "yoruba": "Fóònù",
+    "igbo": "Ékwè ǹtị",
+    "english": "Phone"
+  },
+  {
+    "yoruba": "Apótí",
+    "igbo": "Ìgbe",
+    "english": "Box"
+  },
+  {
+    "yoruba": "Ìwé",
+    "igbo": "Íwé",
+    "english": "Book"
+  },
+  {
+    "yoruba": "Aago",
+    "igbo": "Ẹlèkéré",
+    "english": "Clock"
+  },
+  {
+    "yoruba": "Ọgiri",
+    "igbo": "Ósì",
+    "english": "Wall"
+  },
+  {
+    "yoruba": "Síbí",
+    "igbo": "Sìbí",
+    "english": "Spoon"
+  },
+  {
+    "yoruba": "Abẹ́",
+    "igbo": "Ḿmá",
+    "english": "Knife"
+  },
+  {
+    "yoruba": "Ìgò",
+    "igbo": "Ìfè",
+    "english": "Cup"
+  },
+  {
+    "yoruba": "Ago",
+    "igbo": "Ǹgbọ̀",
+    "english": "Pot"
+  },
+  {
+    "yoruba": "Apẹrẹ",
+    "igbo": "Ápàrí",
+    "english": "Plate"
+  },
+   {
+    "yoruba": "Ọ̀nà",
+    "igbo": "Ụ́zọ̀",
+    "english": "Road / Path"
+  },
+  {
+    "yoruba": "Ìtàjẹ",
+    "igbo": "Ị̀tinye nri",
+    "english": "Serving food"
+  },
+  {
+    "yoruba": "Aṣọ-ọ̀run",
+    "igbo": "Ákwà ǹchị",
+    "english": "Bedsheet"
+  },
+  {
+    "yoruba": "Oko",
+    "igbo": "Ụgbọ̀ ala",
+    "english": "Car"
+  },
+  {
+    "yoruba": "Ẹlẹ́rọ",
+    "igbo": "Onye ńrụ̀ ígwè",
+    "english": "Technician"
+  },
+  {
+    "yoruba": "Ẹran ẹlẹ́dẹ̀",
+    "igbo": "Ànụ́ ẹ́zì",
+    "english": "Pork"
+  },
+  {
+    "yoruba": "Ẹran màlúù",
+    "igbo": "Ànụ́ éhì",
+    "english": "Cow meat"
+  },
+  {
+    "yoruba": "Ẹran àgùntàn",
+    "igbo": "Ànụ́ àtụ̀rụ̀",
+    "english": "Goat meat"
+  },
+  {
+    "yoruba": "Ẹran ẹyẹ",
+    "igbo": "Ànụ́ nnụ̀nụ̀",
+    "english": "Chicken"
+  },
+  {
+    "yoruba": "Ẹran igbó",
+    "igbo": "Ànụ́ ọhịa",
+    "english": "Bush meat"
+  },
+  {
+    "yoruba": "Ẹ̀bọ̀",
+    "igbo": "Èbọ́",
+    "english": "Sacrifice"
+  },
+  {
+    "yoruba": "Ibi ọ́fà",
+    "igbo": "Ụ́lọ̀ ogige",
+    "english": "Kitchen area"
+  },
+  {
+    "yoruba": "Ibi mímu",
+    "igbo": "Ụ́lọ̀ mmiri",
+    "english": "Drinking area"
+  },
+  {
+    "yoruba": "Omi",
+    "igbo": "M̀mírí",
+    "english": "Water"
+  },
+  {
+    "yoruba": "Aja",
+    "igbo": "Ázị́zà",
+    "english": "Broom"
+  },
+  {
+    "yoruba": "Ẹnìyàn",
+    "igbo": "Ǹdị",
+    "english": "People"
+  },
+  {
+    "yoruba": "Ẹ̀mí",
+    "igbo": "M̀ụọ̀",
+    "english": "Spirit / Breath"
+  },
+  {
+    "yoruba": "Ìrònú",
+    "igbo": "Echiche",
+    "english": "Thought"
+  },
+  {
+    "yoruba": "Ifẹ́",
+    "igbo": "Ǹhụ̀nanya",
+    "english": "Love"
+  },
+  {
+    "yoruba": "Àánú",
+    "igbo": "Ébèré",
+    "english": "Mercy"
+  },
+  {
+    "yoruba": "Ọ̀rọ̀",
+    "igbo": "Òkwù",
+    "english": "Word / Matter"
+  },
+  {
+    "yoruba": "Àṣà",
+    "igbo": "Òmè̄nàlà",
+    "english": "Culture"
+  },
+  {
+    "yoruba": "Orin",
+    "igbo": "Ǹbụ̀",
+    "english": "Song"
+  },
+  {
+    "yoruba": "Àdúrà",
+    "igbo": "Ékpèrè",
+    "english": "Prayer"
+  },
+  {
+    "yoruba": "Àwòrán",
+    "igbo": "Ǹrụ́tọ̀",
+    "english": "Picture"
+  },
+  {
+    "yoruba": "Ọjọ́ mẹta",
+    "igbo": "Ụ́bọ̀chi atọ",
+    "english": "Three days"
+  },
+  {
+    "yoruba": "Aṣọ ìfunpọ",
+    "igbo": "Ákwà íkpò",
+    "english": "Diaper / Pad"
+  },
+  {
+    "yoruba": "Ẹjọ́",
+    "igbo": "Ézí",
+    "english": "Case / Matter"
+  },
+  {
+    "yoruba": "Ọjọ́ ìsinmi",
+    "igbo": "Ụ́bọ̀chi izu ike",
+    "english": "Rest day"
+  },
+  {
+    "yoruba": "Ọkùnrin",
+    "igbo": "Ǹwòkè",
+    "english": "Man"
+  },
+  {
+    "yoruba": "Ọbìnrin",
+    "igbo": "Ǹwáanyị",
+    "english": "Woman"
+  },
+  {
+    "yoruba": "Omo tuntun",
+    "igbo": "Ǹwá ọ́hụ̀rụ̀",
+    "english": "Newborn baby"
+  },
+  {
+    "yoruba": "Ọmọde",
+    "igbo": "Ńwá ǹtà",
+    "english": "Child"
+  },
+  {
+    "yoruba": "Agbà",
+    "igbo": "Òkèèké",
+    "english": "Elder"
+  },
+  {
+    "yoruba": "Ẹ̀tẹ",
+    "igbo": "Íté",
+    "english": "Stool"
+  },
+  {
+    "yoruba": "Ọkùnrin ile",
+    "igbo": "Dì ǹ'ụ́lọ̀",
+    "english": "Man of the house"
+  },
+  {
+    "yoruba": "Ìgbà",
+    "igbo": "Ógọ́",
+    "english": "Time"
+  },
+  {
+    "yoruba": "Ojú",
+    "igbo": "Ányá",
+    "english": "Eye"
+  },
+  {
+    "yoruba": "Ẹsẹ̀",
+    "igbo": "Ụ́kwụ́",
+    "english": "Leg"
+  },
+  {
+    "yoruba": "Ọwó",
+    "igbo": "Égo",
+    "english": "Money"
+  },
+  {
+    "yoruba": "Gbogbo",
+    "igbo": "Hà niile",
+    "english": "All"
+  },
+  {
+    "yoruba": "Kò",
+    "igbo": "Ǹbà",
+    "english": "Not"
+  },
+  {
+    "yoruba": "Béèni",
+    "igbo": "Éè",
+    "english": "Yes"
+  },
+  {
+    "yoruba": "Béèkọ́",
+    "igbo": "Ǹbà",
+    "english": "No"
+  },
+  {
+    "yoruba": "Títí",
+    "igbo": "Rúo",
+    "english": "Until"
+  },
+  {
+    "yoruba": "Nítorí",
+    "igbo": "N’ihi",
+    "english": "Because"
+  },
+  {
+    "yoruba": "Nílé",
+    "igbo": "N’ụlọ",
+    "english": "At home"
+  },
+  {
+    "yoruba": "Àpọ̀",
+    "igbo": "Akpa",
+    "english": "Bag"
+  },
+  {
+    "yoruba": "Òjíṣẹ́",
+    "igbo": "Ọ̀nyé ozi",
+    "english": "Messenger"
+  },
+  {
+    "yoruba": "Àkúnya",
+    "igbo": "Ẹ̀gbè",
+    "english": "Corner"
+  },
+  {
+    "yoruba": "Ìbà",
+    "igbo": "Nnọọ / Ǹdo",
+    "english": "Greeting"
+  },
+  {
+    "yoruba": "Ìfaradà",
+    "igbo": "Ndú ndú",
+    "english": "Patience"
+  },
+  {
+    "yoruba": "Ọlọ́run",
+    "igbo": "Chúkwú",
+    "english": "God"
+  },
+  {
+    "yoruba": "Ẹni rere",
+    "igbo": "Ǹdị ọma",
+    "english": "Good person"
+  },
+  {
+    "yoruba": "Ẹka ile",
+    "igbo": "Ụ́lọ̀ ìké",
+    "english": "House section"
+  },
+  {
+    "yoruba": "Ẹsẹ́",
+    "igbo": "Ụ́kwụ́",
+    "english": "Feet"
+  }
 ]

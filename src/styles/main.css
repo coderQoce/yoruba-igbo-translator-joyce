@@ -1,3 +1,6 @@
+/* ================================
+   BASE RESET & GENERAL LAYOUT
+================================= */
 body {
   font-family: Arial, sans-serif;
   background: #f6f6f6;
@@ -6,7 +9,6 @@ body {
   text-align: center;
 }
 
-/* Container with spacing for navbar */
 .app {
   padding-top: 100px;
   display: flex;
@@ -14,23 +16,25 @@ body {
   align-items: center;
 }
 
-/* Header */
+/* ================================
+   HEADER STYLES
+================================= */
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Input + Button modern layout */
+/* ================================
+   INPUT FORM
+================================= */
 .input-form {
   display: flex;
-  gap: 0;
   width: 90%;
   max-width: 500px;
   border-bottom: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 20px;
-
 }
 
 .input-form input {
@@ -56,54 +60,9 @@ h1 {
   background-color: #004999;
 }
 
-/* Output card */
-.output-card {
-  margin-top: 20px;
-  background: #eef;
-  padding: 1rem;
-  border-radius: 6px;
-  max-width: 400px;
-  width: 90%;
-}
-
-.output-card div {
-  margin-bottom: 10px;
-}
-
-.output-card button {
-  margin-left: 10px;
-  padding: 4px 8px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* Yoruba Keyboard */
-.keyboard {
-  margin-top: 20px;
-}
-
-.keys {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.keys button {
-  font-size: 16px;
-  padding: 8px 12px;
-  cursor: pointer;
-  background: #ddd;
-  border: none;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-.keys button:hover {
-  background: #ccc;
-}
+/* ================================
+   OUTPUT CARD STYLING
+================================= */
 .output-card {
   background: white;
   padding: 1.5rem 2rem;
@@ -111,6 +70,7 @@ h1 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   max-width: 500px;
   margin: 2rem auto;
+  width: 90%;
   transition: all 0.3s ease;
 }
 
@@ -119,6 +79,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .output-label {
@@ -133,6 +94,7 @@ h1 {
   text-align: left;
   color: #555;
   font-size: 1.1rem;
+  word-break: break-word;
 }
 
 .copy-btn {
@@ -174,28 +136,310 @@ h1 {
   }
 }
 
+/* ================================
+   YORUBA KEYBOARD
+================================= */
+.keyboard {
+  margin-top: 20px;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.keys button {
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.keys button:hover {
+  background: #ccc;
+}
+/* Advanced Yoruba Keyboard Styles */
+.keyboard {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+  user-select: none;
+}
+
+.keyboard-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.key {
+  padding: 10px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  min-width: 40px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.key:hover {
+  background-color: #e6f0ff;
+  transform: translateY(-1px);
+}
+
+.shift-key,
+.delete-key {
+  background-color: #e0e0e0;
+  font-weight: 600;
+}
+
+.space-key {
+  flex-grow: 1;
+  padding: 12px 60px;
+  background-color: #f9f9f9;
+  border: 1px solid #bbb;
+}
+.toggle-keyboard-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-keyboard-btn:hover {
+  background-color: #004999;
+}
+/* ================================
+  About Us
+================================= */
+.about-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.developer-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0077cc;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+}
+.about-page {
+  padding: 6rem 2rem 2rem; /* push down to avoid navbar overlap */
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-info {
+  max-width: 700px;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.about-paragraph {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive for wider screens */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about-image {
+    margin-right: 2rem;
+  }
+
+  .about-info {
+    text-align: left;
+  }
+}
+.about-page {
+  padding: 6rem 2rem 3rem;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 2.5rem;
+  color: #222;
+}
+
+.about-dev-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-dev-info {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.about-project-details h3 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.about-project-details h4 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.about-project-details p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-project-details ul {
+  padding-left: 1.2rem;
+  list-style-type: none;
+}
+
+.about-project-details li {
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.about-project-details li::before {
+  content: "•";
+  color: #3f3f3f;
+  position: absolute;
+  left: 0;
+}
+
+/* ================================
+   NAVBAR DESKTOP + MOBILE
+================================= */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-
- color: #000;
+  background: #fff;
+  color: #000;
   padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   z-index: 1000;
-
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
 }
 
-/* Container for logo + nav to control layout */
 .navbar-content {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 30rem;
-  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 /* Logo */
@@ -206,13 +450,14 @@ h1 {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Nav links */
+/* Nav Links */
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  transition: max-height 0.3s ease;
 }
 
 .nav-links a {
@@ -225,7 +470,145 @@ h1 {
 }
 
 .nav-links a:hover {
-   
-  text-decoration: none;
   border-bottom: 2px solid #0066cc;
+}
+
+/* Hamburger Toggle */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: none;
+}
+
+/* Mobile Header */
+.mobile-header {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Menu Wrapper */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  z-index: 999;
+}
+
+.nav-links.open {
+  max-height: 300px;
+  margin-top: 0.5rem;
+}
+
+/* ================================
+   RESPONSIVE UTILITIES
+================================= */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* SMALL SCREENS */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .nav-links.mobile-menu li {
+    margin: 0.5rem 0;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .input-form {
+    flex-direction: column;
+    border: none;
+    gap: 10px;
+  }
+
+  .input-form input,
+  .input-form button {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .output-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .output-text {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/* EXTRA SMALL SCREENS */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keys button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+.keys button {
+  min-width: 36px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+  .output-card {
+    padding: 1rem;
+  }
+
+  .output-text {
+    font-size: 1rem;
+  }
 }
