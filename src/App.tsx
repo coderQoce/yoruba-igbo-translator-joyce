@@ -4,6 +4,8 @@ import InputForm from './components/InputForm';
 import OutputCard from './components/OutputCard';
 import YorubaKeyboard from './components/YorubaKeyboard';
 import './styles/main.css';
+import Navbar from './components/Navbar';
+
 
 function App() {
   const [inputWord, setInputWord] = useState('');
@@ -15,17 +17,20 @@ function App() {
   };
 
   const handleKeyboardInput = (char: string) => {
-    setInputWord(prev => prev + char);
+  setInputWord((prev: string) => prev + char);
+
   };
 
   return (
-    <div className="app">
-      <h1>Yoruba to Igbo Translator</h1>
-      <InputForm input={inputWord} setInput={setInputWord} onSubmit={handleTranslate} />
-      <YorubaKeyboard onKeyPress={handleKeyboardInput} />
-      {result && <OutputCard result={result} />}
-    </div>
-  );
+  <div className="app">
+    <Navbar />
+    <h1>Yoruba to Igbo Translator</h1>
+    <InputForm input={inputWord} setInput={setInputWord} onSubmit={handleTranslate} />
+    {result && <OutputCard result={result} />}
+    <YorubaKeyboard onKeyPress={handleKeyboardInput} />
+  </div>
+);
+
 }
 
 export default App;

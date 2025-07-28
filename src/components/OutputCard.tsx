@@ -1,25 +1,44 @@
-import React from 'react';
+import { useState } from 'react';
+import { FiCopy } from 'react-icons/fi';
 
 interface Props {
   result: { igbo: string; english: string };
 }
 
-const OutputCard: React.FC<Props> = ({ result }) => {
-  const copyToClipboard = (text: string) => {
+const OutputCard = ({ result }: Props) => {
+  const [copied, setCopied] = useState('');
+
+  const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
-    alert(`Copied: ${text}`);
+    setCopied(label);
+    setTimeout(() => setCopied(''), 1500);
   };
 
   return (
     <div className="output-card">
-      <div>
-        <strong>Igbo:</strong> {result.igbo}
-        <button onClick={() => copyToClipboard(result.igbo)}>Copy</button>
+      <div className="output-item">
+        <span className="output-label">Igbo:</span>
+        <span className="output-text">{result.igbo}</span>
+        <button
+          className="copy-btn"
+          onClick={() => copyToClipboard(result.igbo, 'Igbo')}
+          title="Copy Igbo"
+        >
+          <FiCopy size={18} />
+        </button>
       </div>
-      <div>
-        <strong>English:</strong> {result.english}
-        <button onClick={() => copyToClipboard(result.english)}>Copy</button>
+      <div className="output-item">
+        <span className="output-label">English:</span>
+        <span className="output-text">{result.english}</span>
+        <button
+          className="copy-btn"
+          onClick={() => copyToClipboard(result.english, 'English')}
+          title="Copy English"
+        >
+          <FiCopy size={18} />
+        </button>
       </div>
+      {copied && <div className="copied-message">{copied} copied!</div>}
     </div>
   );
 };
