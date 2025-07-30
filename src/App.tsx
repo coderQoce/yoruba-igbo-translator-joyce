@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import dictionary from './data/dictionary.json';
+import dictionary from '../backend/dictionary.json';
 import InputForm from './components/InputForm';
 import OutputCard from './components/OutputCard';
 import YorubaKeyboard from './components/YorubaKeyboard';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import AddWord from './components/Add';
+import EditWord from './components/Edit';
 
 import './styles/main.css';
 
@@ -60,6 +62,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/add" element={<AddWord />} />
+        <Route path="/edit" element={<EditWord />} />
       </Routes>
     </Router>
   );

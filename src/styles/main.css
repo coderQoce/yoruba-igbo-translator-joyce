@@ -432,6 +432,138 @@ h1 {
   max-height: 300px;
   margin-top: 0.5rem;
 }
+/* ================================
+   NEW PAGES ADD & EDIT PAGES
+================================= */
+
+.form-container {
+  max-width: 600px;
+  margin: 6rem auto 4rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #cce3ff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 0.5rem;
+}
+
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #cce3ff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f9fbff;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container input[type="text"]:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
+}
+
+.form-container button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  background: #0077c7;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  margin-top: 80px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #1e3a8a; /* blue-900 */
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1; /* slate-300 */
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.form-button:hover {
+  background-color: #1d4ed8;
+}
+
+.form-message {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+  color: #1e293b;
+}
+
+.form-container button:hover {
+  background: #005fa3;
+}
+
+.status {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #003366;
+  text-align: center;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
+  .form-container {
+    margin: 5rem 1rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 0.95rem;
+  }
+}
 
 /* ================================
    RESPONSIVE UTILITIES & BREAKPOINTS
