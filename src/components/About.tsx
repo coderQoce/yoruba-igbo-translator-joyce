@@ -30,7 +30,7 @@ const About: React.FC = () => {
           users of all backgrounds.
         </p>
 
-        <h4>Key Features:</h4>;
+        <h4>Key Features:</h4>
         <ul>
           <li>📝 Yoruba word input field with full virtual Yoruba keyboard</li>
           <li>🔄 Translates to both Igbo and English</li>

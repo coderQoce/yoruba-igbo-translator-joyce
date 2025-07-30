@@ -32,7 +32,7 @@ function Home() {
 
   return (
     <div className="app">
-      <h1>Yoruba to Igbo Translator</h1>
+      <h1>Yoruba to Igbo Language Translator</h1>
       <InputForm input={inputWord} setInput={setInputWord} onSubmit={handleTranslate} />
       {result && <OutputCard result={result} />}
 
