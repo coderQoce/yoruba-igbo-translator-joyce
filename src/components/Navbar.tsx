@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     <div className="navbar">
       <div className="navbar-content">
         <div className="mobile-header">
-          <div className="logo">YoToIgb</div>
+          <div className="logo">Yo<span style={{ color: 'blue' }}>To</span>Igb</div>
           <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
