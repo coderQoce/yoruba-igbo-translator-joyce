@@ -1,61 +1,57 @@
 import React, { useState } from 'react';
 
-interface Props {
+
+interface YorubaKeyboardProps {
   onKeyPress: (char: string) => void;
-  onDelete?: () => void;
-  onSpace?: () => void;
 }
 
-const YorubaKeyboard: React.FC<Props> = ({ onKeyPress, onDelete, onSpace }) => {
-  const [isUppercase, setIsUppercase] = useState(false);
+const YorubaKeyboard: React.FC<YorubaKeyboardProps> = ({ onKeyPress }) => {
+  const [isUppercase, setIsUppercase] = useState(true);
 
-  const lowercaseRows = [
-    ['q', 'w', 'ẹ', 'r', 't', 'y', 'u', 'i', 'o', 'ọ', 'p'],
-    ['a', 'ṣ', 's', 'd', 'f', 'g', 'gb', 'h', 'j', 'k', 'l'],
-    ['⇧', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '⌫'],
-    ['à', 'á', 'è', 'é', 'ì', 'í', 'ò', 'ó', 'ù', 'ú', 'ń'],
-    ['␣']
+  const uppercaseKeys = [
+    ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H', 'I', 'J', 'K', 'L', 'M'],
+    ['N', 'O', 'Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'W', 'Y'],
+    ['Á', 'À', 'Ā', 'É', 'È', 'Ē', 'Ẹ́', 'Ẹ̀', 'Ẹ̄', 'Í', 'Ì', 'Ī'],
+    ['Ó', 'Ò', 'Ō', 'Ọ́', 'Ọ̀', 'Ọ̄', 'Ú', 'Ù', 'Ū']
   ];
 
-  const uppercaseRows = [
-    ['Q', 'W', 'Ẹ', 'R', 'T', 'Y', 'U', 'I', 'O', 'Ọ', 'P'],
-    ['A', 'Ṣ', 'S', 'D', 'F', 'G', 'GB', 'H', 'J', 'K', 'L'],
-    ['⇧', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫'],
-    ['À', 'Á', 'È', 'É', 'Ì', 'Í', 'Ò', 'Ó', 'Ù', 'Ú', 'Ń'],
-    ['␣']
+  const lowercaseKeys = [
+    ['a', 'b', 'd', 'e', 'ẹ', 'f', 'g', 'gb', 'h', 'i', 'j', 'k', 'l', 'm'],
+    ['n', 'o', 'ọ', 'p', 'r', 's', 'ṣ', 't', 'u', 'w', 'y'],
+    ['á', 'à', 'ā', 'é', 'è', 'ē', 'ẹ́', 'ẹ̀', 'ẹ̄', 'í', 'ì', 'ī'],
+    ['ó', 'ò', 'ō', 'ọ́', 'ọ̀', 'ọ̄', 'ú', 'ù', 'ū']
   ];
 
-  const handleClick = (char: string) => {
-    if (char === '⇧') {
-      setIsUppercase(prev => !prev);
-    } else if (char === '⌫') {
-      onDelete?.();
-    } else if (char === '␣') {
-      onSpace?.();
-    } else {
-      onKeyPress(char);
-    }
+  const currentKeys = isUppercase ? uppercaseKeys : lowercaseKeys;
+
+  const handleKeyPress = (char: string) => {
+    onKeyPress(char);
   };
 
-  const rows = isUppercase ? uppercaseRows : lowercaseRows;
+  const toggleCase = () => setIsUppercase(prev => !prev);
 
   return (
-    <div className="keyboard">
-      <p className="keyboard-title">Yorùbá Keyboard:</p>
-      <div className="keyboard-container">
-        {rows.map((row, rowIndex) => (
-          <div className="keyboard-row" key={rowIndex}>
-            {row.map((char, keyIndex) => (
+    <div className="yoruba-keyboard-wrapper">
+      <h3 className="keyboard-header">Yorùbá Keyboard</h3>
+      <div className="keyboard-rows">
+        {currentKeys.map((row, i) => (
+          <div key={i} className="keyboard-row">
+            {row.map((key) => (
               <button
-                key={keyIndex}
-                className={`key ${char === '⇧' ? 'shift-key' : ''} ${char === '⌫' ? 'delete-key' : ''} ${char === '␣' ? 'space-key' : ''}`}
-                onClick={() => handleClick(char)}
+                key={key}
+                className="keyboard-key"
+                onClick={() => handleKeyPress(key)}
               >
-                {char === '␣' ? 'Space' : char}
+                {key}
               </button>
             ))}
           </div>
         ))}
+        <div className="keyboard-row control-row">
+          <button className="keyboard-key shift" onClick={toggleCase}>⇧</button>
+          <button className="keyboard-key space" onClick={() => handleKeyPress(' ')}>Space</button>
+          <button className="keyboard-key delete" onClick={() => onKeyPress('delete')}>⌫</button>
+        </div>
       </div>
     </div>
   );

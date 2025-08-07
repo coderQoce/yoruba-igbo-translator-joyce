@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import axios from 'axios';
+import YorubaKeyboard from './YorubaKeyboard';
 
 const Edit = () => {
   const [searchWord, setSearchWord] = useState('');
   const [result, setResult] = useState<{ igbo: string; english: string } | null>(null);
   const [message, setMessage] = useState('');
+  const [showKeyboard, setShowKeyboard] = useState(false);
 
   const handleSearch = async () => {
     try {
       const res = await axios.get('http://localhost:5000/api/words');
-      const match = res.data.find((entry: any) => entry.yoruba.toLowerCase() === searchWord.toLowerCase());
+      const match = res.data.find(
+        (entry: any) => entry.yoruba.toLowerCase() === searchWord.toLowerCase()
+      );
       if (match) {
         setResult({ igbo: match.igbo, english: match.english });
         setMessage('');
@@ -35,6 +39,14 @@ const Edit = () => {
     }
   };
 
+  const handleKeyboardInput = (key: string) => {
+    if (key === 'delete') {
+      setSearchWord((prev) => prev.slice(0, -1));
+    } else {
+      setSearchWord((prev) => prev + key);
+    }
+  };
+
   return (
     <div className="form-container">
       <h2 className="form-title">Edit Word</h2>
@@ -46,12 +58,22 @@ const Edit = () => {
         placeholder="Search Yoruba word"
         className="form-input"
       />
-      <button onClick={handleSearch} className="form-button">
+      <button onClick={handleSearch} className="forms-button">
         Search
       </button>
 
+      <button
+        onClick={() => setShowKeyboard((prev) => !prev)}
+        className="forms-button"
+        style={{ marginTop: '10px' }}
+      >
+        {showKeyboard ? 'Hide Keyboard' : 'Show Keyboard'}
+      </button>
+
+      {showKeyboard && <YorubaKeyboard onKeyPress={handleKeyboardInput} />}
+
       {result && (
-        <div className="edit-fields">
+        <div className="form-fields">
           <input
             type="text"
             value={result.igbo}
@@ -66,7 +88,7 @@ const Edit = () => {
             placeholder="English"
             className="form-input"
           />
-          <button onClick={handleUpdate} className="form-button">
+          <button onClick={handleUpdate} className="forms-button">
             Update Word
           </button>
         </div>

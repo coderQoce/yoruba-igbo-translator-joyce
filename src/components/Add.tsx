@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import axios from 'axios';
+import YorubaKeyboard from './YorubaKeyboard';
 
 const Add = () => {
   const [yoruba, setYoruba] = useState('');
   const [igbo, setIgbo] = useState('');
   const [english, setEnglish] = useState('');
   const [message, setMessage] = useState('');
+  const [showKeyboard, setShowKeyboard] = useState(false); // toggle state
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,6 +24,14 @@ const Add = () => {
     } catch (err: any) {
       const errorMsg = err.response?.data?.message || '❌ Error adding word';
       setMessage(errorMsg);
+    }
+  };
+
+  const handleKeyboardInput = (key: string) => {
+    if (key === 'delete') {
+      setYoruba((prev) => prev.slice(0, -1));
+    } else {
+      setYoruba((prev) => prev + key);
     }
   };
 
@@ -52,6 +62,18 @@ const Add = () => {
         />
         <button type="submit" className="form-button">Add Word</button>
       </form>
+
+   
+      <button
+        onClick={() => setShowKeyboard(!showKeyboard)}
+        className="toggle-keyboard-btn"
+      >
+        {showKeyboard ? 'Hide Keyboard' : 'Show  Keyboard'}
+      </button>
+
+      
+      {showKeyboard && <YorubaKeyboard onKeyPress={handleKeyboardInput} />}
+
       {message && <p className="form-message">{message}</p>}
     </div>
   );
