@@ -1,12 +1,21 @@
 import { useState } from 'react';
 import axios from 'axios';
-import YorubaKeyboard from './YorubaKeyboard';
+import { FaDeleteLeft } from 'react-icons/fa6';
+import { FaKeyboard } from 'react-icons/fa';
+
+const keys = [
+  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
+  ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
+  ['Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'Ụ', 'W', 'Y'],
+  ['́', '̀', '̂']
+];
 
 const Edit = () => {
   const [searchWord, setSearchWord] = useState('');
   const [result, setResult] = useState<{ igbo: string; english: string } | null>(null);
   const [message, setMessage] = useState('');
   const [showKeyboard, setShowKeyboard] = useState(false);
+  const [isUppercase, setIsUppercase] = useState(true);
 
   const handleSearch = async () => {
     try {
@@ -42,6 +51,10 @@ const Edit = () => {
   const handleKeyboardInput = (key: string) => {
     if (key === 'delete') {
       setSearchWord((prev) => prev.slice(0, -1));
+    } else if (key === 'space') {
+      setSearchWord((prev) => prev + ' ');
+    } else if (key === 'toggle') {
+      setIsUppercase((prev) => !prev);
     } else {
       setSearchWord((prev) => prev + key);
     }
@@ -58,9 +71,7 @@ const Edit = () => {
         placeholder="Search Yoruba word"
         className="form-input"
       />
-      <button onClick={handleSearch} className="forms-button">
-        Search
-      </button>
+      <button onClick={handleSearch} className="forms-button">Search</button>
 
       <button
         onClick={() => setShowKeyboard((prev) => !prev)}
@@ -70,7 +81,34 @@ const Edit = () => {
         {showKeyboard ? 'Hide Keyboard' : 'Show Keyboard'}
       </button>
 
-      {showKeyboard && <YorubaKeyboard onKeyPress={handleKeyboardInput} />}
+      {showKeyboard && (
+        <div className="keyboard">
+          {keys.map((row, i) => (
+            <div className="keyboard-row" key={i}>
+              {row.map((key) => (
+                <button
+                  key={key}
+                  className="keyboard-key"
+                  onClick={() => handleKeyboardInput(isUppercase ? key : key.toLowerCase())}
+                >
+                  {isUppercase ? key : key.toLowerCase()}
+                </button>
+              ))}
+            </div>
+          ))}
+          <div className="keyboard-row">
+            <button className="keyboard-action" onClick={() => handleKeyboardInput('delete')}>
+              <FaDeleteLeft />
+            </button>
+            <button className="keyboard-space" onClick={() => handleKeyboardInput('space')}>
+              space
+            </button>
+            <button className="keyboard-action" onClick={() => handleKeyboardInput('toggle')}>
+              <FaKeyboard />
+            </button>
+          </div>
+        </div>
+      )}
 
       {result && (
         <div className="form-fields">
@@ -88,9 +126,7 @@ const Edit = () => {
             placeholder="English"
             className="form-input"
           />
-          <button onClick={handleUpdate} className="forms-button">
-            Update Word
-          </button>
+          <button onClick={handleUpdate} className="forms-button">Update Word</button>
         </div>
       )}
 

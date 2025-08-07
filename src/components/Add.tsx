@@ -1,13 +1,22 @@
 import { useState } from 'react';
 import axios from 'axios';
-import YorubaKeyboard from './YorubaKeyboard';
+import { FaDeleteLeft } from 'react-icons/fa6';
+import { FaKeyboard } from 'react-icons/fa';
+
+const keys = [
+  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
+  ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
+  ['Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'Ụ', 'W', 'Y'],
+  ['́', '̀', '̂']
+];
 
 const Add = () => {
   const [yoruba, setYoruba] = useState('');
   const [igbo, setIgbo] = useState('');
   const [english, setEnglish] = useState('');
   const [message, setMessage] = useState('');
-  const [showKeyboard, setShowKeyboard] = useState(false); // toggle state
+  const [showKeyboard, setShowKeyboard] = useState(false);
+  const [isUppercase, setIsUppercase] = useState(true);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,7 +24,7 @@ const Add = () => {
       await axios.post('http://localhost:5000/api/words', {
         yoruba,
         igbo,
-        english
+        english,
       });
       setMessage('✅ Word added successfully');
       setYoruba('');
@@ -30,6 +39,10 @@ const Add = () => {
   const handleKeyboardInput = (key: string) => {
     if (key === 'delete') {
       setYoruba((prev) => prev.slice(0, -1));
+    } else if (key === 'space') {
+      setYoruba((prev) => prev + ' ');
+    } else if (key === 'toggle') {
+      setIsUppercase((prev) => !prev);
     } else {
       setYoruba((prev) => prev + key);
     }
@@ -41,21 +54,21 @@ const Add = () => {
       <form onSubmit={handleAdd}>
         <input
           value={yoruba}
-          onChange={e => setYoruba(e.target.value)}
+          onChange={(e) => setYoruba(e.target.value)}
           placeholder="Yoruba"
           required
           className="form-input"
         />
         <input
           value={igbo}
-          onChange={e => setIgbo(e.target.value)}
+          onChange={(e) => setIgbo(e.target.value)}
           placeholder="Igbo"
           required
           className="form-input"
         />
         <input
           value={english}
-          onChange={e => setEnglish(e.target.value)}
+          onChange={(e) => setEnglish(e.target.value)}
           placeholder="English"
           required
           className="form-input"
@@ -63,16 +76,42 @@ const Add = () => {
         <button type="submit" className="form-button">Add Word</button>
       </form>
 
-   
       <button
         onClick={() => setShowKeyboard(!showKeyboard)}
         className="toggle-keyboard-btn"
+        style={{ marginTop: '10px' }}
       >
-        {showKeyboard ? 'Hide Keyboard' : 'Show  Keyboard'}
+        {showKeyboard ? 'Hide Keyboard' : 'Show Keyboard'}
       </button>
 
-      
-      {showKeyboard && <YorubaKeyboard onKeyPress={handleKeyboardInput} />}
+      {showKeyboard && (
+        <div className="keyboard">
+          {keys.map((row, i) => (
+            <div className="keyboard-row" key={i}>
+              {row.map((key) => (
+                <button
+                  key={key}
+                  className="keyboard-key"
+                  onClick={() => handleKeyboardInput(isUppercase ? key : key.toLowerCase())}
+                >
+                  {isUppercase ? key : key.toLowerCase()}
+                </button>
+              ))}
+            </div>
+          ))}
+          <div className="keyboard-row">
+            <button className="keyboard-action" onClick={() => handleKeyboardInput('delete')}>
+              <FaDeleteLeft />
+            </button>
+            <button className="keyboard-space" onClick={() => handleKeyboardInput('space')}>
+              space
+            </button>
+            <button className="keyboard-action" onClick={() => handleKeyboardInput('toggle')}>
+              <FaKeyboard />
+            </button>
+          </div>
+        </div>
+      )}
 
       {message && <p className="form-message">{message}</p>}
     </div>
