@@ -7,6 +7,8 @@ import AddWord from './components/Add';
 import EditWord from './components/Edit';
 import './styles/main.css';
 
+const BACKEND_URL = 'https://yoruba-igbo-translator-joyce.onrender.com';
+
 const keys = [
   ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
   ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
@@ -23,7 +25,7 @@ function App() {
 
   const handleTranslate = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/words');
+      const res = await axios.get(`${BACKEND_URL}/api/words`);
       const match = res.data.find(
         (entry: any) => entry.yoruba.toLowerCase() === inputWord.toLowerCase()
       );
@@ -108,8 +110,8 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/add" element={<AddWord />} />
-        <Route path="/edit" element={<EditWord />} />
+        <Route path="/add" element={<AddWord backendUrl={BACKEND_URL} />} />
+        <Route path="/edit" element={<EditWord backendUrl={BACKEND_URL} />} />
       </Routes>
     </Router>
   );

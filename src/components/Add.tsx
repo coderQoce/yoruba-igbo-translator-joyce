@@ -2,6 +2,10 @@ import { useState } from 'react';
 import axios from 'axios';
 import { FaDeleteLeft, FaKeyboard } from 'react-icons/fa6';
 
+type Props = {
+  backendUrl: string;
+};
+
 const keys = [
   ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
   ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
@@ -9,7 +13,7 @@ const keys = [
   ['́', '̀', '̂']
 ];
 
-const AddWord = () => {
+const AddWord = ({ backendUrl }: Props) => {
   const [yoruba, setYoruba] = useState('');
   const [igbo, setIgbo] = useState('');
   const [english, setEnglish] = useState('');
@@ -20,7 +24,7 @@ const AddWord = () => {
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/words', {
+      await axios.post(`${backendUrl}/api/words`, {
         yoruba: yoruba.toLowerCase(),
         igbo,
         english
@@ -97,7 +101,7 @@ const AddWord = () => {
               <FaDeleteLeft />
             </button>
             <button className="keyboard-space" onClick={() => handleKeyboardInput('space')}>
-              space
+              Space
             </button>
             <button className="keyboard-action" onClick={() => handleKeyboardInput('toggle')}>
               <FaKeyboard />

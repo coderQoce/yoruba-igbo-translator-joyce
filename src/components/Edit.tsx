@@ -8,6 +8,10 @@ type Word = {
   english: string;
 };
 
+type Props = {
+  backendUrl: string;
+};
+
 const keys = [
   ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
   ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
@@ -15,7 +19,7 @@ const keys = [
   ['́', '̀', '̂']
 ];
 
-const EditWord = () => {
+const EditWord = ({ backendUrl }: Props) => {
   const [searchWord, setSearchWord] = useState('');
   const [result, setResult] = useState<Word | null>(null);
   const [message, setMessage] = useState('');
@@ -24,7 +28,7 @@ const EditWord = () => {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.get<Word[]>('http://localhost:5000/api/words');
+      const res = await axios.get<Word[]>(`${backendUrl}/api/words`);
       const match = res.data.find(word => word.yoruba.toLowerCase() === searchWord.toLowerCase());
       if (match) {
         setResult(match);
@@ -41,7 +45,7 @@ const EditWord = () => {
   const handleUpdate = async () => {
     if (!result) return;
     try {
-      await axios.put(`http://localhost:5000/api/words/${searchWord.toLowerCase()}`, result);
+      await axios.put(`${backendUrl}/api/words/${searchWord.toLowerCase()}`, result);
       setMessage('✅ Word updated successfully');
     } catch {
       setMessage('❌ Error updating word');
