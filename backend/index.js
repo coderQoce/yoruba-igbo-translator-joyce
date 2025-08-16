@@ -1,61 +1,85 @@
-const express = require('express');
-const fs = require('fs');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const path = require('path');
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-const DATA_PATH = path.join(__dirname, 'dictionary.json');
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// Read dictionary file
-function readDictionary() {
-  return JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
-}
-
-// Write to dictionary file
-function writeDictionary(data) {
-  fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
-}
-
-// Get all words
-app.get('/api/words', (req, res) => {
-  const data = readDictionary();
-  res.json(data);
+const DictionarySchema = new mongoose.Schema({
+  yoruba: { type: String, required: true, unique: true },
+  igbo: { type: String, required: true },
+  english: { type: String, required: true },
 });
 
-// Add a new word
-app.post('/api/words', (req, res) => {
-  const newWord = req.body;
-  const data = readDictionary();
+const Dictionary = mongoose.model("Dictionary", DictionarySchema);
 
-  const exists = data.find(entry => entry.yoruba.toLowerCase() === newWord.yoruba.toLowerCase());
-  if (exists) return res.status(400).json({ message: 'Word already exists.' });
-
-  data.push(newWord);
-  writeDictionary(data);
-  res.json({ message: 'Word added successfully.' });
+// GET all words
+app.get("/api/words", async (req, res) => {
+  try {
+    const words = await Dictionary.find();
+    res.json(words);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch words" });
+  }
 });
 
-// Edit a word
-app.put('/api/words/:yoruba', (req, res) => {
-  const targetWord = req.params.yoruba.toLowerCase();
-  const updatedData = req.body;
-  const data = readDictionary();
+// POST a new word
+app.post("/api/words", async (req, res) => {
+  try {
+    const newWord = {
+      yoruba: req.body.yoruba.toLowerCase(),
+      igbo: req.body.igbo,
+      english: req.body.english,
+    };
 
-  const index = data.findIndex(entry => entry.yoruba.toLowerCase() === targetWord);
-  if (index === -1) return res.status(404).json({ message: 'Word not found.' });
+    const exists = await Dictionary.findOne({ yoruba: newWord.yoruba });
+    if (exists) {
+      return res.status(400).json({ message: "Word already exists." });
+    }
 
-  data[index] = updatedData;
-  writeDictionary(data);
-  res.json({ message: 'Word updated successfully.' });
+    const word = new Dictionary(newWord);
+    await word.save();
+    res.json({ message: "Word added successfully." });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to add word" });
+  }
 });
 
-// Start server
+// PUT update a word
+app.put("/api/words/:yoruba", async (req, res) => {
+  try {
+    const targetWord = req.params.yoruba.toLowerCase();
+    const updatedData = {
+      yoruba: req.body.yoruba?.toLowerCase() || targetWord,
+      igbo: req.body.igbo,
+      english: req.body.english,
+    };
+
+    const updatedWord = await Dictionary.findOneAndUpdate(
+      { yoruba: targetWord },
+      updatedData,
+      { new: true }
+    );
+
+    if (!updatedWord) {
+      return res.status(404).json({ message: "Word not found." });
+    }
+
+    res.json({ message: "Word updated successfully.", word: updatedWord });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to update word" });
+  }
+});
+
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

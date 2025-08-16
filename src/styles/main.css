@@ -524,6 +524,169 @@ h1 {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #0077cc;
 }
+/* =======================
+   General App Styling
+======================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+  background-color: #f0f4ff; /* very light blue background */
+  color: #0a2540; /* dark blue text */
+}
+
+.app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+   margin-top: 90px;
+  background-color: #ffffff; /* white card */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #1a4da0; /* vibrant blue */
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* =======================
+   Input and Buttons
+======================= */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #1a4da0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  border-color: #0a2540;
+  box-shadow: 0 0 5px rgba(26, 77, 160, 0.5);
+}
+
+.form-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a4da0;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.form-button:hover {
+  background-color: #0a2540;
+}
+
+/* =======================
+   Output Card
+======================= */
+.output-card {
+  background-color: #e6f0ff; /* light blue */
+  border: 1px solid #1a4da0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.output-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* =======================
+   Messages
+======================= */
+.form-message {
+  color: #d93025; /* red for errors */
+  margin-top: 1rem;
+}
+
+/* =======================
+   Keyboard Styling
+======================= */
+.keyboard {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.keyboard-key {
+  background-color: #1a4da0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 35px;
+  transition: 0.2s;
+}
+
+.keyboard-key:hover {
+  background-color: #0a2540;
+}
+
+.key.special-key {
+  background-color: #4d79ff;
+}
+
+.key.special-key:hover {
+  background-color: #1a4da0;
+}
+
+.key.space-key {
+  flex: 1;
+  background-color: #4d79ff;
+}
+
+.toggle-keyboard-btn {
+  margin-top: 1rem;
+  background-color: #4d79ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-keyboard-btn:hover {
+  background-color: #1a4da0;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 500px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .keyboard-key {
+    padding: 0.4rem 0.6rem;
+    min-width: 30px;
+    font-size: 0.9rem;
+  }
+}
 
 .form-input,
 .form-container input[type="text"] {

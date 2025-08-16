@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { FaDeleteLeft } from 'react-icons/fa6';
-import { FaKeyboard } from 'react-icons/fa';
+import { FaDeleteLeft, FaKeyboard } from 'react-icons/fa6';
+
+type Word = {
+  yoruba: string;
+  igbo: string;
+  english: string;
+};
 
 const keys = [
   ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
@@ -10,54 +15,44 @@ const keys = [
   ['́', '̀', '̂']
 ];
 
-const Edit = () => {
+const EditWord = () => {
   const [searchWord, setSearchWord] = useState('');
-  const [result, setResult] = useState<{ igbo: string; english: string } | null>(null);
+  const [result, setResult] = useState<Word | null>(null);
   const [message, setMessage] = useState('');
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [isUppercase, setIsUppercase] = useState(true);
 
   const handleSearch = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/words');
-      const match = res.data.find(
-        (entry: any) => entry.yoruba.toLowerCase() === searchWord.toLowerCase()
-      );
+      const res = await axios.get<Word[]>('http://localhost:5000/api/words');
+      const match = res.data.find(word => word.yoruba.toLowerCase() === searchWord.toLowerCase());
       if (match) {
-        setResult({ igbo: match.igbo, english: match.english });
+        setResult(match);
         setMessage('');
       } else {
         setResult(null);
         setMessage('❌ Word not found');
       }
-    } catch (err) {
+    } catch {
       setMessage('❌ Error fetching dictionary');
     }
   };
 
   const handleUpdate = async () => {
+    if (!result) return;
     try {
-      await axios.put(`http://localhost:5000/api/words/${searchWord}`, {
-        yoruba: searchWord,
-        igbo: result?.igbo,
-        english: result?.english,
-      });
-      setMessage('✅ Word updated');
-    } catch (err) {
+      await axios.put(`http://localhost:5000/api/words/${searchWord.toLowerCase()}`, result);
+      setMessage('✅ Word updated successfully');
+    } catch {
       setMessage('❌ Error updating word');
     }
   };
 
   const handleKeyboardInput = (key: string) => {
-    if (key === 'delete') {
-      setSearchWord((prev) => prev.slice(0, -1));
-    } else if (key === 'space') {
-      setSearchWord((prev) => prev + ' ');
-    } else if (key === 'toggle') {
-      setIsUppercase((prev) => !prev);
-    } else {
-      setSearchWord((prev) => prev + key);
-    }
+    if (key === 'delete') setSearchWord(prev => prev.slice(0, -1));
+    else if (key === 'space') setSearchWord(prev => prev + ' ');
+    else if (key === 'toggle') setIsUppercase(prev => !prev);
+    else setSearchWord(prev => prev + key);
   };
 
   return (
@@ -67,15 +62,15 @@ const Edit = () => {
       <input
         type="text"
         value={searchWord}
-        onChange={(e) => setSearchWord(e.target.value)}
+        onChange={e => setSearchWord(e.target.value)}
         placeholder="Search Yoruba word"
         className="form-input"
       />
-      <button onClick={handleSearch} className="forms-button">Search</button>
+      <button onClick={handleSearch} className="form-button">Search</button>
 
       <button
-        onClick={() => setShowKeyboard((prev) => !prev)}
-        className="forms-button"
+        onClick={() => setShowKeyboard(prev => !prev)}
+        className="toggle-keyboard-btn"
         style={{ marginTop: '10px' }}
       >
         {showKeyboard ? 'Hide Keyboard' : 'Show Keyboard'}
@@ -85,7 +80,7 @@ const Edit = () => {
         <div className="keyboard">
           {keys.map((row, i) => (
             <div className="keyboard-row" key={i}>
-              {row.map((key) => (
+              {row.map(key => (
                 <button
                   key={key}
                   className="keyboard-key"
@@ -100,9 +95,7 @@ const Edit = () => {
             <button className="keyboard-action" onClick={() => handleKeyboardInput('delete')}>
               <FaDeleteLeft />
             </button>
-            <button className="keyboard-space" onClick={() => handleKeyboardInput('space')}>
-              space
-            </button>
+            <button className="keyboard-space" onClick={() => handleKeyboardInput('space')}>Space</button>
             <button className="keyboard-action" onClick={() => handleKeyboardInput('toggle')}>
               <FaKeyboard />
             </button>
@@ -115,18 +108,18 @@ const Edit = () => {
           <input
             type="text"
             value={result.igbo}
-            onChange={(e) => setResult({ ...result, igbo: e.target.value })}
+            onChange={e => setResult({ ...result, igbo: e.target.value })}
             placeholder="Igbo"
             className="form-input"
           />
           <input
             type="text"
             value={result.english}
-            onChange={(e) => setResult({ ...result, english: e.target.value })}
+            onChange={e => setResult({ ...result, english: e.target.value })}
             placeholder="English"
             className="form-input"
           />
-          <button onClick={handleUpdate} className="forms-button">Update Word</button>
+          <button onClick={handleUpdate} className="form-button">Update Word</button>
         </div>
       )}
 
@@ -135,4 +128,4 @@ const Edit = () => {
   );
 };
 
-export default Edit;
+export default EditWord;
