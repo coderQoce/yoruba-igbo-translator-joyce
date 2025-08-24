@@ -8,23 +8,36 @@ type Word = {
   english: string;
 };
 
-const keys = [
-  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
-  ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
-  ['Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'Ụ', 'W', 'Y'],
-  ['́', '̀', '̂']
+type Props = {
+  backendUrl: string;
+};
+
+// Yoruba Keyboard Layouts
+const uppercaseKeys = [
+  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H', 'I', 'J', 'K', 'L', 'M'],
+  ['N', 'O', 'Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'W', 'Y'],
+  ['Á', 'À', 'Ā', 'É', 'È', 'Ē', 'Ẹ́', 'Ẹ̀', 'Ẹ̄', 'Í', 'Ì', 'Ī'],
+  ['Ó', 'Ò', 'Ō', 'Ọ́', 'Ọ̀', 'Ọ̄', 'Ú', 'Ù', 'Ū']
 ];
 
-const EditWord = () => {
+const lowercaseKeys = [
+  ['a', 'b', 'd', 'e', 'ẹ', 'f', 'g', 'gb', 'h', 'i', 'j', 'k', 'l', 'm'],
+  ['n', 'o', 'ọ', 'p', 'r', 's', 'ṣ', 't', 'u', 'w', 'y'],
+  ['á', 'à', 'ā', 'é', 'è', 'ē', 'ẹ́', 'ẹ̀', 'ẹ̄', 'í', 'ì', 'ī'],
+  ['ó', 'ò', 'ō', 'ọ́', 'ọ̀', 'ọ̄', 'ú', 'ù', 'ū']
+];
+
+const EditWord = ({ backendUrl }: Props) => {
   const [searchWord, setSearchWord] = useState('');
   const [result, setResult] = useState<Word | null>(null);
   const [message, setMessage] = useState('');
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [isUppercase, setIsUppercase] = useState(true);
 
+  // Search Yoruba word
   const handleSearch = async () => {
     try {
-      const res = await axios.get<Word[]>('http://localhost:5000/api/words');
+      const res = await axios.get<Word[]>(`${backendUrl}/api/words`);
       const match = res.data.find(word => word.yoruba.toLowerCase() === searchWord.toLowerCase());
       if (match) {
         setResult(match);
@@ -38,16 +51,18 @@ const EditWord = () => {
     }
   };
 
+  // Update word
   const handleUpdate = async () => {
     if (!result) return;
     try {
-      await axios.put(`http://localhost:5000/api/words/${searchWord.toLowerCase()}`, result);
+      await axios.put(`${backendUrl}/api/words/${searchWord.toLowerCase()}`, result);
       setMessage('✅ Word updated successfully');
     } catch {
       setMessage('❌ Error updating word');
     }
   };
 
+  // Keyboard input actions
   const handleKeyboardInput = (key: string) => {
     if (key === 'delete') setSearchWord(prev => prev.slice(0, -1));
     else if (key === 'space') setSearchWord(prev => prev + ' ');
@@ -78,15 +93,15 @@ const EditWord = () => {
 
       {showKeyboard && (
         <div className="keyboard">
-          {keys.map((row, i) => (
+          {(isUppercase ? uppercaseKeys : lowercaseKeys).map((row, i) => (
             <div className="keyboard-row" key={i}>
               {row.map(key => (
                 <button
                   key={key}
                   className="keyboard-key"
-                  onClick={() => handleKeyboardInput(isUppercase ? key : key.toLowerCase())}
+                  onClick={() => handleKeyboardInput(key)}
                 >
-                  {isUppercase ? key : key.toLowerCase()}
+                  {key}
                 </button>
               ))}
             </div>

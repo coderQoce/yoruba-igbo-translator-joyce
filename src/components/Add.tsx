@@ -2,14 +2,26 @@ import { useState } from 'react';
 import axios from 'axios';
 import { FaDeleteLeft, FaKeyboard } from 'react-icons/fa6';
 
-const keys = [
-  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
-  ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
-  ['Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'Ụ', 'W', 'Y'],
-  ['́', '̀', '̂']
+type Props = {
+  backendUrl: string;
+};
+
+// Yoruba Keyboard Layouts
+const uppercaseKeys = [
+  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H', 'I', 'J', 'K', 'L', 'M'],
+  ['N', 'O', 'Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'W', 'Y'],
+  ['Á', 'À', 'Ā', 'É', 'È', 'Ē', 'Ẹ́', 'Ẹ̀', 'Ẹ̄', 'Í', 'Ì', 'Ī'],
+  ['Ó', 'Ò', 'Ō', 'Ọ́', 'Ọ̀', 'Ọ̄', 'Ú', 'Ù', 'Ū']
 ];
 
-const AddWord = () => {
+const lowercaseKeys = [
+  ['a', 'b', 'd', 'e', 'ẹ', 'f', 'g', 'gb', 'h', 'i', 'j', 'k', 'l', 'm'],
+  ['n', 'o', 'ọ', 'p', 'r', 's', 'ṣ', 't', 'u', 'w', 'y'],
+  ['á', 'à', 'ā', 'é', 'è', 'ē', 'ẹ́', 'ẹ̀', 'ẹ̄', 'í', 'ì', 'ī'],
+  ['ó', 'ò', 'ō', 'ọ́', 'ọ̀', 'ọ̄', 'ú', 'ù', 'ū']
+];
+
+const AddWord = ({ backendUrl }: Props) => {
   const [yoruba, setYoruba] = useState('');
   const [igbo, setIgbo] = useState('');
   const [english, setEnglish] = useState('');
@@ -17,10 +29,11 @@ const AddWord = () => {
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [isUppercase, setIsUppercase] = useState(true);
 
+  // Submit new word
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/words', {
+      await axios.post(`${backendUrl}/api/words`, {
         yoruba: yoruba.toLowerCase(),
         igbo,
         english
@@ -34,6 +47,7 @@ const AddWord = () => {
     }
   };
 
+  // Keyboard actions
   const handleKeyboardInput = (key: string) => {
     if (key === 'delete') setYoruba(prev => prev.slice(0, -1));
     else if (key === 'space') setYoruba(prev => prev + ' ');
@@ -79,15 +93,15 @@ const AddWord = () => {
 
       {showKeyboard && (
         <div className="keyboard">
-          {keys.map((row, i) => (
+          {(isUppercase ? uppercaseKeys : lowercaseKeys).map((row, i) => (
             <div className="keyboard-row" key={i}>
               {row.map(key => (
                 <button
                   key={key}
                   className="keyboard-key"
-                  onClick={() => handleKeyboardInput(isUppercase ? key : key.toLowerCase())}
+                  onClick={() => handleKeyboardInput(key)}
                 >
-                  {isUppercase ? key : key.toLowerCase()}
+                  {key}
                 </button>
               ))}
             </div>
@@ -97,7 +111,7 @@ const AddWord = () => {
               <FaDeleteLeft />
             </button>
             <button className="keyboard-space" onClick={() => handleKeyboardInput('space')}>
-              space
+              Space
             </button>
             <button className="keyboard-action" onClick={() => handleKeyboardInput('toggle')}>
               <FaKeyboard />

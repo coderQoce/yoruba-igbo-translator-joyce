@@ -7,11 +7,21 @@ import AddWord from './components/Add';
 import EditWord from './components/Edit';
 import './styles/main.css';
 
-const keys = [
-  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
-  ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
-  ['Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'Ụ', 'W', 'Y'],
-  ['́', '̀', '̂']
+const BACKEND_URL = 'https://yoruba-igbo-translator-joyce.onrender.com';
+
+// Yoruba Keyboard Layouts
+const uppercaseKeys = [
+  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H', 'I', 'J', 'K', 'L', 'M'],
+  ['N', 'O', 'Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'W', 'Y'],
+  ['Á', 'À', 'Ā', 'É', 'È', 'Ē', 'Ẹ́', 'Ẹ̀', 'Ẹ̄', 'Í', 'Ì', 'Ī'],
+  ['Ó', 'Ò', 'Ō', 'Ọ́', 'Ọ̀', 'Ọ̄', 'Ú', 'Ù', 'Ū']
+];
+
+const lowercaseKeys = [
+  ['a', 'b', 'd', 'e', 'ẹ', 'f', 'g', 'gb', 'h', 'i', 'j', 'k', 'l', 'm'],
+  ['n', 'o', 'ọ', 'p', 'r', 's', 'ṣ', 't', 'u', 'w', 'y'],
+  ['á', 'à', 'ā', 'é', 'è', 'ē', 'ẹ́', 'ẹ̀', 'ẹ̄', 'í', 'ì', 'ī'],
+  ['ó', 'ò', 'ō', 'ọ́', 'ọ̀', 'ọ̄', 'ú', 'ù', 'ū']
 ];
 
 function App() {
@@ -21,9 +31,10 @@ function App() {
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [isUpperCase, setIsUpperCase] = useState(true);
 
+  // Translate Yoruba → Igbo
   const handleTranslate = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/words');
+      const res = await axios.get(`${BACKEND_URL}/api/words`);
       const match = res.data.find(
         (entry: any) => entry.yoruba.toLowerCase() === inputWord.toLowerCase()
       );
@@ -40,6 +51,7 @@ function App() {
     }
   };
 
+  // Keyboard Actions
   const handleKeyPress = (char: string) => setInputWord(prev => prev + char);
   const handleDelete = () => setInputWord(prev => prev.slice(0, -1));
   const handleSpace = () => setInputWord(prev => prev + ' ');
@@ -84,15 +96,15 @@ function App() {
 
               {showKeyboard && (
                 <div className="keyboard">
-                  {keys.map((row, i) => (
+                  {(isUpperCase ? uppercaseKeys : lowercaseKeys).map((row, i) => (
                     <div key={i} className="keyboard-row">
                       {row.map((key) => (
                         <button
                           key={key}
                           className="keyboard-key"
-                          onClick={() => handleKeyPress(isUpperCase ? key : key.toLowerCase())}
+                          onClick={() => handleKeyPress(key)}
                         >
-                          {isUpperCase ? key : key.toLowerCase()}
+                          {key}
                         </button>
                       ))}
                     </div>
@@ -107,9 +119,9 @@ function App() {
             </div>
           }
         />
+        <Route path="/add" element={<AddWord backendUrl={BACKEND_URL} />} />
+        <Route path="/edit" element={<EditWord backendUrl={BACKEND_URL} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/add" element={<AddWord />} />
-        <Route path="/edit" element={<EditWord />} />
       </Routes>
     </Router>
   );
