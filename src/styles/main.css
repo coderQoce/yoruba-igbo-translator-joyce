@@ -525,23 +525,22 @@ body {
   margin: 0;
   padding: 0;
  
-  background-color: #f0f4ff; /* very light blue background */
-  color: #0a2540; /* dark blue text */
-}
+  background-color: #f0f4ff; 
+  color: #0a2540; 
 
 .app {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
    margin-top: 90px;
-  background-color: #ffffff; /* white card */
+  background-color: #ffffff; 
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 h1 {
-  color: #1a4da0; /* vibrant blue */
+  color: #1a4da0; 
   margin-bottom: 1.5rem;
   font-size: 2rem;
 }
@@ -585,7 +584,7 @@ h1 {
    Output Card
 ======================= */
 .output-card {
-  background-color: #e6f0ff; /* light blue */
+  background-color: #e6f0ff;
   border: 1px solid #1a4da0;
   border-radius: 8px;
   padding: 1rem;
@@ -602,7 +601,7 @@ h1 {
    Messages
 ======================= */
 .form-message {
-  color: #d93025; /* red for errors */
+  color: #d93025; 
   margin-top: 1rem;
 }
 
@@ -725,7 +724,6 @@ h1 {
   text-align: center;
   color: #003366;
 }
-
 @media screen and (max-width: 600px) {
   .form-container {
     margin: 5rem 1rem 2rem;
@@ -737,7 +735,8 @@ h1 {
   }
 
   .form-container input,
-  .forms-container button {
+  .form-container button {
     font-size: 0.95rem;
   }
+}
 }

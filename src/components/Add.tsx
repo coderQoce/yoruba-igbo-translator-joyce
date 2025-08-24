@@ -6,11 +6,19 @@ type Props = {
   backendUrl: string;
 };
 
-const keys = [
-  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H'],
-  ['I', 'Ị', 'J', 'K', 'L', 'M', 'N', 'Ń', 'O'],
-  ['Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'Ụ', 'W', 'Y'],
-  ['́', '̀', '̂']
+// Yoruba Keyboard Layouts
+const uppercaseKeys = [
+  ['A', 'B', 'D', 'E', 'Ẹ', 'F', 'G', 'GB', 'H', 'I', 'J', 'K', 'L', 'M'],
+  ['N', 'O', 'Ọ', 'P', 'R', 'S', 'Ṣ', 'T', 'U', 'W', 'Y'],
+  ['Á', 'À', 'Ā', 'É', 'È', 'Ē', 'Ẹ́', 'Ẹ̀', 'Ẹ̄', 'Í', 'Ì', 'Ī'],
+  ['Ó', 'Ò', 'Ō', 'Ọ́', 'Ọ̀', 'Ọ̄', 'Ú', 'Ù', 'Ū']
+];
+
+const lowercaseKeys = [
+  ['a', 'b', 'd', 'e', 'ẹ', 'f', 'g', 'gb', 'h', 'i', 'j', 'k', 'l', 'm'],
+  ['n', 'o', 'ọ', 'p', 'r', 's', 'ṣ', 't', 'u', 'w', 'y'],
+  ['á', 'à', 'ā', 'é', 'è', 'ē', 'ẹ́', 'ẹ̀', 'ẹ̄', 'í', 'ì', 'ī'],
+  ['ó', 'ò', 'ō', 'ọ́', 'ọ̀', 'ọ̄', 'ú', 'ù', 'ū']
 ];
 
 const AddWord = ({ backendUrl }: Props) => {
@@ -21,6 +29,7 @@ const AddWord = ({ backendUrl }: Props) => {
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [isUppercase, setIsUppercase] = useState(true);
 
+  // Submit new word
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -38,6 +47,7 @@ const AddWord = ({ backendUrl }: Props) => {
     }
   };
 
+  // Keyboard actions
   const handleKeyboardInput = (key: string) => {
     if (key === 'delete') setYoruba(prev => prev.slice(0, -1));
     else if (key === 'space') setYoruba(prev => prev + ' ');
@@ -83,15 +93,15 @@ const AddWord = ({ backendUrl }: Props) => {
 
       {showKeyboard && (
         <div className="keyboard">
-          {keys.map((row, i) => (
+          {(isUppercase ? uppercaseKeys : lowercaseKeys).map((row, i) => (
             <div className="keyboard-row" key={i}>
               {row.map(key => (
                 <button
                   key={key}
                   className="keyboard-key"
-                  onClick={() => handleKeyboardInput(isUppercase ? key : key.toLowerCase())}
+                  onClick={() => handleKeyboardInput(key)}
                 >
-                  {isUppercase ? key : key.toLowerCase()}
+                  {key}
                 </button>
               ))}
             </div>
