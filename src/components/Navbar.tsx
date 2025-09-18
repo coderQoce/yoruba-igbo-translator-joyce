@@ -1,29 +1,78 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  return (
-    <div className="navbar">
-      <div className="navbar-content">
-        <div className="mobile-header">
-          <div className="logo">Yo<span style={{ color: 'blue' }}>To</span>Igb</div>
-          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/add" onClick={() => setMenuOpen(false)}>Add</Link></li>
-          <li><Link to="/edit" onClick={() => setMenuOpen(false)}>Edit</Link></li>
-            <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-        </ul>
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
 
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
+
+  return (
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-container">
+        <div className="nav-logo">
+          <Link to="/">
+            <span className="logo-text">Homo</span>
+            <span className="logo-dot"></span>
+          </Link>
+        </div>
+
+        <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+          <div className="nav-item">
+            <Link 
+              to="/" 
+              className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+            >
+              <span className="link-text">Home</span>
+              <span className="link-underline"></span>
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link 
+              to="/add" 
+              className={`nav-link ${location.pathname === '/add' ? 'active' : ''}`}
+            >
+              <span className="link-text">Add</span>
+              <span className="link-underline"></span>
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link 
+              to="/edit" 
+              className={`nav-link ${location.pathname === '/edit' ? 'active' : ''}`}
+            >
+              <span className="link-text">Edit</span>
+              <span className="link-underline"></span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="menu-toggle" onClick={toggleMenu}>
+          {menuOpen ? (
+            <X size={28} className="toggle-icon" />
+          ) : (
+            <Menu size={28} className="toggle-icon" />
+          )}
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

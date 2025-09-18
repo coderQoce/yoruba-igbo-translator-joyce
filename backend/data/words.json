@@ -1,0 +1,775 @@
+
+[
+  {
+    "word": "Dun",
+    "meanings": [
+      { "tone": "Dún", "definition": "Sound" },
+      { "tone": "Dùn", "definition": "Sweet" }
+    ]
+  },
+  {
+    "word": "Mi",
+    "meanings": [
+      { "tone": "Mí", "definition": "Breathe" },
+      { "tone": "Mì", "definition": "Shake" }
+    ]
+  },
+  {
+    "word": "Oba",
+    "meanings": [
+      { "tone": "Ọba", "definition": "King" },
+      { "tone": "Ọbà", "definition": "Name of Sango's wife" }
+    ]
+  },
+  {
+    "word": "Agbe",
+    "meanings": [
+      { "tone": "Àgbẹ̀", "definition": "Farmer" },
+      { "tone": "Agbẹ́", "definition": "Name of person" },
+      { "tone": "Agbè", "definition": "Gourd" },
+      { "tone": "Agbe", "definition": "Begging" },
+      { "tone": "Àgbé", "definition": "Name of lineage" }
+    ]
+  },
+  {
+    "word": "Obo",
+    "meanings": [
+      { "tone": "Ọ̀bọ̀", "definition": "Name of tree" },
+      { "tone": "Ọ̀bọ", "definition": "Monkey" }
+    ]
+  },
+  {
+    "word": "Abo",
+    "meanings": [
+      { "tone": "Abọ́", "definition": "Plate" },
+      { "tone": "Abọ̀", "definition": "Welcome" }
+    ]
+  },
+  {
+    "word": "Sun",
+    "meanings": [
+      { "tone": "Sùn", "definition": "Sleep" },
+      { "tone": "Sún", "definition": "Move" },
+      { "tone": "Sun", "definition": "(Something increase)" }
+    ]
+  },
+  {
+    "word": "Ero",
+    "meanings": [
+      { "tone": "Ẹ̀rọ", "definition": "Machine" },
+      { "tone": "Ẹ̀rọ̀", "definition": "Ease" }
+    ]
+  },
+  {
+    "word": "Sokoto",
+    "meanings": [
+      { "tone": "Ṣòkòtò", "definition": "Trousers" },
+      { "tone": "Sókótó", "definition": "Name of a town" }
+    ]
+  },
+  {
+    "word": "Ebi",
+    "meanings": [
+      { "tone": "Ẹbí", "definition": "Family" },
+      { "tone": "Ẹ̀bi", "definition": "Fault" }
+    ]
+  },
+  {
+    "word": "Ibi",
+    "meanings": [
+      { "tone": "Ìbí", "definition": "Lineage" },
+      { "tone": "Ibí", "definition": "Here" },
+      { "tone": "Ibi", "definition": "Placenta" },
+      { "tone": "Ibi", "definition": "Bad" }
+    ]
+  },
+  {
+    "word": "Eja",
+    "meanings": [
+      { "tone": "Ẹ̀já", "definition": "Doubt" },
+      { "tone": "Ẹja", "definition": "Fish" }
+    ]
+  },
+  {
+    "word": "Asa",
+    "meanings": [
+      { "tone": "Àṣà", "definition": "Culture" },
+      { "tone": "Àṣá", "definition": "Lark" },
+      { "tone": "Aṣà", "definition": "Name of a place" }
+    ]
+  },
+  {
+    "word": "Irun",
+    "meanings": [
+      { "tone": "Irun", "definition": "Hair" },
+      { "tone": "Ìrun", "definition": "Prayer done by Muslim" }
+    ]
+  },
+  {
+    "word": "Odi",
+    "meanings": [
+      { "tone": "Òdí", "definition": "Ifá corpus" },
+      { "tone": "Odi", "definition": "Dumb" },
+      { "tone": "Òdí", "definition": "Arẹ̀ṣà lineage" }
+    ]
+  },
+  {
+    "word": "Ope",
+    "meanings": [
+      { "tone": "Ọpẹ́", "definition": "Thank" },
+      { "tone": "Ọ̀pẹ́", "definition": "Palm tree" },
+      { "tone": "Ọ̀pẹ́", "definition": "Unmoving object" }
+    ]
+  },
+  {
+    "word": "Agbon",
+    "meanings": [
+      { "tone": "Agbọ́n", "definition": "Wasp" },
+      { "tone": "Àgbọn", "definition": "Coconut" },
+      { "tone": "Àgbọ̀n", "definition": "Chin" },
+      { "tone": "Agbọ̀n", "definition": "Basket" }
+    ]
+  },
+  {
+    "word": "Ogbon",
+    "meanings": [
+      { "tone": "Ọgbọ́n", "definition": "Wisdom" },
+      { "tone": "Ọgbọ́n", "definition": "Thirty" }
+    ]
+  },
+  {
+    "word": "Iru",
+    "meanings": [
+      { "tone": "Irú", "definition": "Locust beans" },
+      { "tone": "Ìrù", "definition": "Tail" }
+    ]
+  },
+  {
+    "word": "Ere",
+    "meanings": [
+      { "tone": "Eré", "definition": "Play" },
+      { "tone": "Èrè", "definition": "Gain" },
+      { "tone": "Ère", "definition": "Statue" }
+    ]
+  },
+  {
+    "word": "Ojo",
+    "meanings": [
+      { "tone": "Òjó", "definition": "Name of a person" },
+      { "tone": "Òjó", "definition": "Rain" },
+      { "tone": "Ojo", "definition": "Coward" }
+    ]
+  },
+  {
+    "word": "Esi",
+    "meanings": [
+      { "tone": "Èsì", "definition": "Response" },
+      { "tone": "Èsì", "definition": "Wild pig" }
+    ]
+  },
+  {
+    "word": "Olu",
+    "meanings": [
+      { "tone": "Olú", "definition": "Mushroom" },
+      { "tone": "Olú", "definition": "Name of a person" },
+      { "tone": "Òlù", "definition": "Instrument used to press clothes in olden days" }
+    ]
+  },
+  {
+    "word": "Oluko",
+    "meanings": [
+      { "tone": "Olùkọ́", "definition": "Teacher" },
+      { "tone": "Olùkọ", "definition": "Someone who writes" },
+      { "tone": "Olùkọ̀", "definition": "Activist" }
+    ]
+  },
+  {
+    "word": "Oye",
+    "meanings": [
+      { "tone": "Òye", "definition": "Insight" },
+      { "tone": "Oyè", "definition": "Title" }
+    ]
+  },
+  {
+    "word": "Eje",
+    "meanings": [
+      { "tone": "Ẹ̀jẹ̀", "definition": "Blood" },
+      { "tone": "Ẹ̀jẹ́", "definition": "Promise" }
+    ]
+  },
+  {
+    "word": "Je",
+    "meanings": [
+      { "tone": "Jẹ", "definition": "Eat" },
+      { "tone": "Jẹ́", "definition": "Become something" }
+    ]
+  },
+  {
+    "word": "Esin",
+    "meanings": [
+      { "tone": "Ẹṣin", "definition": "Horse" },
+      { "tone": "Ẹ̀sín", "definition": "Embarrassment" },
+      { "tone": "Ẹ̀ṣìn", "definition": "Religion" }
+    ]
+  },
+  {
+    "word": "Ato",
+    "meanings": [
+      { "tone": "Àtọ̀", "definition": "Sperm" },
+      { "tone": "Atọ́", "definition": "Mini calabash" }
+    ]
+  },
+  {
+    "word": "Ese",
+    "meanings": [
+      { "tone": "Ẹ̀ṣẹ̀", "definition": "Sin" },
+      { "tone": "Ẹsẹ̀", "definition": "Leg" }
+    ]
+  },
+  {
+    "word": "Igbin",
+    "meanings": [
+      { "tone": "Ìgbín", "definition": "Snail" },
+      { "tone": "Igbìn", "definition": "Obatala's drum" }
+    ]
+  },
+  {
+    "word": "Mu",
+    "meanings": [
+      { "tone": "Mu", "definition": "Drink" },
+      { "tone": "Mú", "definition": "Pick" }
+    ]
+  },
+  {
+    "word": "Ye",
+    "meanings": [
+      { "tone": "Yé", "definition": "Understand" },
+      { "tone": "Yè", "definition": "Survive" }
+    ]
+  },
+  {
+    "word": "Ha",
+    "meanings": [
+      { "tone": "Há", "definition": "Distribute" },
+      { "tone": "Ha", "definition": "Peel" }
+    ]
+  },
+  {
+    "word": "Ran",
+    "meanings": [
+      { "tone": "Rán", "definition": "Send errand" },
+      { "tone": "Ràn", "definition": "Help" },
+      { "tone": "Rán", "definition": "Sew" }
+    ]
+  },
+  {
+    "word": "Du",
+    "meanings": [
+      { "tone": "Dù", "definition": "To contest for position" },
+      { "tone": "Dú", "definition": "Slaughter" }
+    ]
+  },
+  {
+    "word": "Re",
+    "meanings": [
+      { "tone": "Rẹ̀", "definition": "Tire" },
+      { "tone": "Rẹ", "definition": "To dye something" },
+      { "tone": "Rẹ́", "definition": "Cut" }
+    ]
+  },
+  {
+    "word": "Ikun",
+    "meanings": [
+      { "tone": "Ikùn", "definition": "Squirrel" },
+      { "tone": "Ikùn", "definition": "Belly" },
+      { "tone": "Ikun", "definition": "Mucus" }
+    ]
+  },
+  {
+    "word": "Bo",
+    "meanings": [
+      { "tone": "Bọ̀", "definition": "Arrive" },
+      { "tone": "Bọ́", "definition": "Feed" },
+      { "tone": "Bọ̀", "definition": "Worship" }
+    ]
+  },
+  {
+    "word": "Irin",
+    "meanings": [
+      { "tone": "Irin", "definition": "Iron" },
+      { "tone": "Ìrìn", "definition": "Walking" }
+    ]
+  },
+  {
+    "word": "Iya",
+    "meanings": [
+      { "tone": "Ìyá", "definition": "Mother" },
+      { "tone": "Ìyà", "definition": "Beating" },
+      { "tone": "Ìyá", "definition": "Name of leaf" }
+    ]
+  },
+  {
+    "word": "Eru",
+    "meanings": [
+      { "tone": "Ẹ̀rù", "definition": "Fear" },
+      { "tone": "Ẹrú", "definition": "Slave" },
+      { "tone": "Ẹrù", "definition": "Luggage" }
+    ]
+  },
+  {
+    "word": "Eda",
+    "meanings": [
+      { "tone": "Ẹ̀dà", "definition": "Duplicate of something" },
+      { "tone": "Ẹ̀dá", "definition": "Human being" },
+      { "tone": "Ẹ̀dà", "definition": "The name of disease" }
+    ]
+  },
+  {
+    "word": "Agba",
+    "meanings": [
+      { "tone": "Àgbà", "definition": "Elder" },
+      { "tone": "Àgbá", "definition": "Drum" },
+      { "tone": "Agba", "definition": "Rope" }
+    ]
+  },
+  {
+    "word": "Ana",
+    "meanings": [
+      { "tone": "Àná", "definition": "Yesterday" },
+      { "tone": "Àna", "definition": "In law" }
+    ]
+  },
+  {
+    "word": "Apo",
+    "meanings": [
+      { "tone": "Apó", "definition": "Hunter's bag" },
+      { "tone": "Àpò", "definition": "Pocket" }
+    ]
+  },
+  {
+    "word": "Igba",
+    "meanings": [
+      { "tone": "Igba", "definition": "Two hundred" },
+      { "tone": "Ìgbà", "definition": "Time" },
+      { "tone": "Ìgbá", "definition": "Locust beans" }
+    ]
+  },
+  {
+    "word": "Pe",
+    "meanings": [
+      { "tone": "Pé", "definition": "Complete" },
+      { "tone": "Pé", "definition": "To come together" },
+      { "tone": "Pè", "definition": "Call" }
+    ]
+  },
+  {
+    "word": "Ate",
+    "meanings": [
+      { "tone": "Àtẹ", "definition": "Collection of something" },
+      { "tone": "Àtẹ́", "definition": "Food without salt" }
+    ]
+  },
+  {
+    "word": "Aba",
+    "meanings": [
+      { "tone": "Àbá", "definition": "Suggestion" },
+      { "tone": "Àbá", "definition": "The name of an area in IBADAN" },
+      { "tone": "Abá", "definition": "Village" }
+    ]
+  },
+  {
+    "word": "Gun",
+    "meanings": [
+      { "tone": "Gùn", "definition": "Tall" },
+      { "tone": "Gùn", "definition": "To climb something" },
+      { "tone": "Gún", "definition": "Grind/Pound" }
+    ]
+  },
+  {
+    "word": "Be",
+    "meanings": [
+      { "tone": "Bẹ̀", "definition": "Beg" },
+      { "tone": "Bẹ", "definition": "To peel something" }
+    ]
+  },
+  {
+    "word": "Akoko",
+    "meanings": [
+      { "tone": "Àkókò", "definition": "Time" },
+      { "tone": "Àkókó", "definition": "The name of town in Ondo" }
+    ]
+  },
+  {
+    "word": "Obe",
+    "meanings": [
+      { "tone": "Ọ̀bẹ", "definition": "Knife" },
+      { "tone": "Ọbẹ̀", "definition": "Soup" }
+    ]
+  },
+  {
+    "word": "Ilu",
+    "meanings": [
+      { "tone": "Ìlú", "definition": "Town" },
+      { "tone": "Ìlù", "definition": "Drum" }
+    ]
+  },
+  {
+    "word": "Ko",
+    "meanings": [
+      { "tone": "Kọ", "definition": "Write" },
+      { "tone": "Kọ́", "definition": "Learn" },
+      { "tone": "Kọ̀", "definition": "Against" }
+    ]
+  },
+  {
+    "word": "Mo",
+    "meanings": [
+      { "tone": "Mọ̀", "definition": "Know" },
+      { "tone": "Mọ́", "definition": "Clean" },
+      { "tone": "Mọ", "definition": "Build" }
+    ]
+  },
+  {
+    "word": "Pon",
+    "meanings": [
+      { "tone": "Pọ́n", "definition": "Ripe" },
+      { "tone": "Pọ̀n", "definition": "Back" },
+      { "tone": "Pọn", "definition": "Fetch" }
+    ]
+  },
+  {
+    "word": "Iba",
+    "meanings": [
+      { "tone": "Ìbà", "definition": "Praise" },
+      { "tone": "Ìbà", "definition": "The title of Kish's king" },
+      { "tone": "Ibà", "definition": "Malaria" },
+      { "tone": "Ibà", "definition": "The name of town in Osun state" }
+    ]
+  },
+  {
+    "word": "Keke",
+    "meanings": [
+      { "tone": "Kẹ̀kẹ́", "definition": "Bicycle" },
+      { "tone": "Kẹ́kẹ́", "definition": "A kind of tribal mark" }
+    ]
+  },
+  {
+    "word": "Aremo",
+    "meanings": [
+      { "tone": "Àrẹ̀mọ̀", "definition": "Heir" },
+      { "tone": "Arẹmọ", "definition": "The name of a place in Ibadan" }
+    ]
+  },
+  {
+    "word": "Emu",
+    "meanings": [
+      {
+        "tone": "Ẹmu",
+        "definition": "Palmwine"
+      },
+      {
+        "tone": "Ẹmu",
+        "definition": "Plyer"
+      },
+      {
+        "tone": "Ẹ̀mù",
+        "definition": "The part in yam that is not suitable for eating"
+      }
+    ]
+  },
+  {
+    "word": "Aran",
+    "meanings": [
+      {
+        "tone": "Àrán",
+        "definition": "Velvet: Name of a cloth"
+      },
+      {
+        "tone": "Àrán",
+        "definition": "Name of a town in Kwara State"
+      },
+      {
+        "tone": "Aràn",
+        "definition": "Earthworm"
+      }
+    ]
+  },
+  {
+    "word": "Titi",
+    "meanings": [
+      {
+        "tone": "Títì",
+        "definition": "Road"
+      },
+      {
+        "tone": "Títí",
+        "definition": "Name of a person"
+      }
+    ]
+  },
+  {
+    "word": "Ara",
+    "meanings": [
+      {
+        "tone": "Àrà",
+        "definition": "Wonder"
+      },
+      {
+        "tone": "Àrá",
+        "definition": "Thunder"
+      },
+      {
+        "tone": "Ara",
+        "definition": "Body"
+      }
+    ]
+  },
+  {
+    "word": "Eji",
+    "meanings": [
+      {
+        "tone": "Èjí",
+        "definition": "Gap-tooth"
+      },
+      {
+        "tone": "Eji",
+        "definition": "Rain"
+      },
+      {
+        "tone": "Èjì",
+        "definition": "Two"
+      }
+    ]
+  },
+  {
+    "word": "Yo",
+    "meanings": [
+      {
+        "tone": "Yọ̀",
+        "definition": "Delight"
+      },
+      {
+        "tone": "Yọ́",
+        "definition": "Dissolve"
+      },
+      {
+        "tone": "Yọ",
+        "definition": "Remove"
+      }
+    ]
+  },
+  {
+    "word": "Eta",
+    "meanings": [
+      {
+        "tone": "Ẹ̀ta",
+        "definition": "Triplet"
+      },
+      {
+        "tone": "Ẹtà",
+        "definition": "Bush dog"
+      },
+      {
+        "tone": "Ẹ̀ta",
+        "definition": "Three"
+      }
+    ]
+  },
+  {
+    "word": "Le",
+    "meanings": [
+      {
+        "tone": "Lé",
+        "definition": "Pursue"
+      },
+      {
+        "tone": "Le",
+        "definition": "Hard"
+      }
+    ]
+  },
+  {
+    "word": "Iwo",
+    "meanings": [
+      {
+        "tone": "Ìwó",
+        "definition": "A town in Osun state"
+      },
+      {
+        "tone": "Ìwo",
+        "definition": "Horn"
+      }
+    ]
+  },
+  {
+    "word": "Tan",
+    "meanings": [
+      {
+        "tone": "Tán",
+        "definition": "Finish"
+      },
+      {
+        "tone": "Tàn",
+        "definition": "Deceive"
+      },
+      {
+        "tone": "Tan",
+        "definition": "Relate"
+      }
+    ]
+  },
+  {
+    "word": "Ogbe",
+    "meanings": [
+      {
+        "tone": "Ọgbẹ̀",
+        "definition": "An area in Oyo"
+      },
+      {
+        "tone": "Ọgbẹ́",
+        "definition": "Injury"
+      }
+    ]
+  },
+  {
+    "word": "Oluwa",
+    "meanings": [
+      {
+        "tone": "Olúwa",
+        "definition": "God"
+      },
+      {
+        "tone": "Olùwà",
+        "definition": "The subject of the sentence"
+      },
+      {
+        "tone": "Olùwá",
+        "definition": "The searcher / Finder"
+      }
+    ]
+  },
+  {
+    "word": "Ose",
+    "meanings": [
+      {
+        "tone": "Ọ̀sẹ̀",
+        "definition": "Week"
+      },
+      {
+        "tone": "Ọṣẹ",
+        "definition": "Soap"
+      }
+    ]
+  },
+  {
+    "word": "Iwe",
+    "meanings": [
+      {
+        "tone": "Ìwé",
+        "definition": "Book"
+      },
+      {
+        "tone": "Iwe",
+        "definition": "Gizzard"
+      }
+    ]
+  },
+  {
+    "word": "Ododo",
+    "meanings": [
+      {
+        "tone": "Òdòdó",
+        "definition": "Flower"
+      },
+      {
+        "tone": "Òdodo",
+        "definition": "Truth"
+      }
+    ]
+  },
+  {
+    "word": "Eko",
+    "meanings": [
+      {
+        "tone": "Ẹ̀kọ́",
+        "definition": "Education"
+      },
+      {
+        "tone": "Ẹ̀kọ",
+        "definition": "Pap"
+      }
+    ]
+  },
+  {
+    "word": "Oko",
+    "meanings": [
+      {
+        "tone": "Ọkọ",
+        "definition": "Husband"
+      },
+      {
+        "tone": "Ọkọ̀",
+        "definition": "Motor"
+      },
+      {
+        "tone": "Ọkọ́",
+        "definition": "Hoe"
+      },
+      {
+        "tone": "Oko",
+        "definition": "Farm"
+      },
+      {
+        "tone": "Òkò",
+        "definition": "Town"
+      },
+      {
+        "tone": "Okó",
+        "definition": "Pennis"
+      }
+    ]
+  },
+  {
+    "word": "Oruko",
+    "meanings": [
+      {
+        "tone": "Orúkọ",
+        "definition": "Name"
+      },
+      {
+        "tone": "Òrúkọ",
+        "definition": "Buck - Male goat"
+      }
+    ]
+  },
+  {
+    "word": "Bata",
+    "meanings": [
+      {
+        "tone": "Bàtà",
+        "definition": "Footwear"
+      },
+      {
+        "tone": "Bàtá",
+        "definition": "Sango drum"
+      }
+    ]
+  },
+  {
+    "word": "Egba",
+    "meanings": [
+      {
+        "tone": "Ẹ̀gbá",
+        "definition": "The name of a town"
+      },
+      {
+        "tone": "Ẹgba",
+        "definition": "Cane"
+      },
+      {
+        "tone": "Ẹ̀gbà",
+        "definition": "Jewelry"
+      }
+    ]
+  }
+]
